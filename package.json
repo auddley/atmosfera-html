@@ -1,8 +1,8 @@
 {
   "name": "legancy",
   "description": "",
-  "author": "Denis Bogdanov",
-  "version": "1.0.0",
+  "author": "Tydorskaya Aleksandra & Vladislav Adamets",
+  "version": "2.0",
   "license": "ISC",
   "main": "gulpfile.js",
   "scripts": {
