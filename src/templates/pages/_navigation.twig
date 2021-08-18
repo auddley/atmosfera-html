@@ -1,0 +1,27 @@
+{% set pages = [
+    {
+        title: 'Главная',
+        href: './index.html',
+    },
+] %}
+
+<section class="dev-navigation">
+    <div class="wrapper">
+        <div class="dev-navigation__wrap">
+            <h1 class="dev-navigation__header">
+                Навигация
+            </h1>
+
+            {% for page in pages %}
+                <div class="dev-navigation__item">
+                    <h2 class="dev-navigation__title">{{ loop.index }}. {{ page.title }}</h2>
+                    <ul class="dev-navigation__list">
+                        <li class="dev-navigation__item">
+                            <a class="dev-navigation__link" target="_blank" href="{{ page.href }}">{{ page.title }}</a>
+                        </li>
+                    </ul>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
