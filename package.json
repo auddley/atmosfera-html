@@ -1,8 +1,8 @@
 {
   "name": "legancy",
   "description": "",
-  "author": "Tydorskaya Aleksandra & Vladislav Adamets",
-  "version": "2.0",
+  "author": "Denis Bogdanov",
+  "version": "1.0.0",
   "license": "ISC",
   "main": "gulpfile.js",
   "scripts": {
@@ -27,6 +27,10 @@
       "stylelint --syntax scss",
       "git add"
     ]
+  },
+  "dependencies": {
+    "vue": "^2.6.12",
+    "vuex": "^3.5.1"
   },
   "devDependencies": {
     "@babel/core": "^7.10.2",
@@ -63,8 +67,7 @@
     "run-sequence": "^2.2.1",
     "stylelint": "^13.7.2",
     "stylelint-config-prettier": "^8.0.2",
-    "vue-loader": "^15.9.6",
-    "vue-svg-loader": "^0.16.0",
+    "vue-loader": "^15.9.3",
     "vue-template-compiler": "^2.6.12",
     "webpack": "^5.16.0",
     "webpack-stream": "^6.1.1"
