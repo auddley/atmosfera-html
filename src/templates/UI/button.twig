@@ -6,11 +6,11 @@
             {% if data %} {{ data }} {% endif %}
 
             {% if type %} type="{{ type }}" {% endif %}>
-        {{ text }}
-
         {% if svg %}
             {{ svg }}
         {% endif %}
+
+        {{ text }}
     </a>
 {% else %}
     <button class="button-primary
@@ -20,10 +20,10 @@
             {% if data %} {{ data }} {% endif %}
 
             {% if type %} type="{{ type }}" {% endif %}>
-        {{ text }}
-
         {% if svg %}
             {{ svg }}
         {% endif %}
+
+        {{ text }}
     </button>
 {% endif %}
