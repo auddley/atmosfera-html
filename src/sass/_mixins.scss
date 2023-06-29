@@ -38,11 +38,11 @@
   }
 }
 
-@mixin font-prop($font-style) {
-  font-size: map-get($font-sizes, $font-style);
-  line-height: map-get($line-heights, $font-style);
-  font-weight: map-get($font-weights, $font-style);
-}
+//@mixin font-prop($font-style) {
+//  font-size: map-get($font-sizes, $font-style);
+//  line-height: map-get($line-heights, $font-style);
+//  font-weight: map-get($font-weights, $font-style);
+//}
 
 // Placeholders
 @mixin input-placeholder {
