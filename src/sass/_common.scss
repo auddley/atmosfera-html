@@ -15,7 +15,8 @@ body {
   flex-direction: column;
   min-width: 320px;
   min-height: 100%;
-  font-size: 14px;
+  color: map-get($basic, main);
+  font-size: 13px;
   overflow-x: hidden;
   font-family: $font1;
 
@@ -54,6 +55,10 @@ button {
     min-width: initial;
     padding: 0;
   }
+
+  @include bp-tablet() {
+    padding: 0 1rem;
+  }
 }
 
 .visible-m {
@@ -76,40 +81,6 @@ button {
   }
 }
 
-.flex {
-  display: flex;
-
-  &_v {
-    &-center {
-      align-items: center;
-    }
-
-    &-start {
-      align-items: flex-start;
-    }
-
-    &-end {
-      align-items: flex-end;
-    }
-  }
-
-  &_h {
-    &-center {
-      justify-content: center;
-    }
-
-    &-between {
-      justify-content: space-between;
-    }
-  }
-}
-
-.flex-grow {
-  &_top {
-    margin-top: auto;
-  }
-}
-
 .flex-double {
   min-width: calc(50% - 1.5rem);
   max-width: calc(50% - 1.5rem);
@@ -118,34 +89,4 @@ button {
     min-width: 100%;
     max-width: 100%;
   }
-}
-
-.center {
-  text-align: center;
-}
-
-.anchor-scroll {
-  position: relative;
-  top: -11rem;
-
-  @include bp-tablet() {
-    top: -6rem;
-  }
-}
-
-.ps__rail-y {
-  position: absolute;
-  right: 0;
-  left: auto !important;
-  width: 0.3rem;
-  background-color: transparent;
-  border-radius: 1rem;
-  z-index: 3;
-}
-
-.ps__thumb-y {
-  position: absolute;
-  width: 100%;
-  background-color: map-get($gray, color_ed);
-  border-radius: 0.3rem;
 }

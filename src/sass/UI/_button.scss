@@ -1,62 +1,61 @@
 .button-primary {
-  transition: all 0.2s;
-  border-radius: 0.3rem;
-  font-family: $font2;
+  transition: all 0.3s;
+  border-radius: 0.6rem;
+  font-family: $font1;
   cursor: pointer;
   text-decoration: none;
-  display: inline-block;
-  text-align: center;
-  padding: 1.1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.7rem 1rem;
   border: none;
+  font-size: 1.4rem;
+  font-weight: 500;
 
-  @include font-prop(paragraph-1);
+  svg {
+    margin-right: 1rem;
+  }
 
   &_main {
-    background: map-get($basic, main);
-    color: $color-white;
-
-    @include bp-tablet(min) {
-      &:hover {
-        background: map-get($basic, primary);
-        color: map-get($basic, main);
-      }
-    }
-  }
-
-  &_border-white {
-    background: transparent;
+    background: map-get($gray, color_f0);
     color: map-get($basic, main);
-    border: 0.1rem solid $color-white;
 
     @include bp-tablet(min) {
       &:hover {
-        background: $color-white;
-      }
-    }
-  }
-
-  &_border-gray {
-    background: transparent;
-    color: map-get($basic, main);
-    border: 0.1rem solid map-get($basic, main);
-
-    @include bp-tablet(min) {
-      &:hover {
-        background: map-get($basic, primary);
-        border-color: map-get($basic, primary);
+        background: map-get($basic, hover-main);
+        color: $color-white;
       }
     }
   }
 
   &_primary {
-    background: map-get($basic, primary);
-    color: map-get($basic, main);
+    background: map-get($basic, hover-main);
+    color: $color-white;
 
     @include bp-tablet(min) {
       &:hover {
-        background: map-get($basic, main);
+        background: map-get($gray, color_f0);
+        color: map-get($basic, main);
+      }
+    }
+  }
+}
+
+.btn {
+  &-yellow {
+    background: $color-yellow;
+    color: $color-black;
+
+    @include bp-tablet(min) {
+      &:hover {
+        background: map-get($basic, hover-main);
         color: $color-white;
       }
     }
+  }
+
+  &-bg-grey {
+    background: map-get($gray, color_f0);
+    color: map-get($basic, main);
   }
 }

@@ -1,6 +1,4 @@
-/*PTSerif*/
-@include font-face("PTSerif", "fonts/PTSerif/PTSerif-Regular", 400);
-
-/*ProximaNova*/
-@include font-face("ProximaNova", "fonts/ProximaNova/ProximaNova-Regular", 400);
-@include font-face("ProximaNova", "fonts/ProximaNova/ProximaNovaCond-Bold", 700);
+/*Manrope*/
+@include font-face("ProximaNova", "fonts/Manrope/Manrope-Regular", 400);
+@include font-face("ProximaNova", "fonts/Manrope/Manrope-Medium", 500);
+@include font-face("ProximaNova", "fonts/Manrope/Manrope-Bold", 700);
