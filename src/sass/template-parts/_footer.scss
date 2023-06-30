@@ -1,3 +1,277 @@
 .website-footer {
   padding: 0;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.footer-main {
+  display: flex;
+  padding-top: 5rem;
+  border-top: 1px solid map-get($gray, color_d4);
+
+  @include bp-desktopXS() {
+    flex-direction: column;
+  }
+}
+
+.footer-links__wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-right: 5rem;
+
+  @include bp-desktopXS() {
+    margin: 0 0 5rem 0;
+  }
+
+  @include bp-tabletXS() {
+    flex-wrap: wrap;
+    margin-bottom: 4rem;
+  }
+
+  @include bp-mobile() {
+    margin-bottom: 3rem;
+  }
+}
+
+.footer-links__item {
+  padding: 0;
+  margin: 0;
+  max-width: 22rem;
+
+  + .footer-links__item {
+    margin-left: 1rem;
+  }
+
+  li {
+    list-style-type: none;
+
+    + li {
+      margin-top: 0.5rem;
+    }
+
+    &:first-of-type {
+      margin-bottom: 1.5rem;
+
+      a {
+        font-size: 1.7rem;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+    }
+
+    a {
+      text-decoration: none;
+      color: map-get($basic, main);
+      transition: 0.3s;
+
+      &:hover {
+        color: map-get($basic, hover-primary);
+      }
+    }
+  }
+
+  @include bp-tabletXS() {
+    width: calc(50% - 1.5rem);
+    max-width: none;
+
+    + .footer-links__item {
+      margin-left: 0;
+    }
+
+    &:last-of-type {
+      margin-top: 4rem;
+    }
+  }
+
+  @include bp-mobile() {
+    width: 100%;
+
+    + .footer-links__item {
+      margin-top: 3rem;
+    }
+  }
+}
+
+.footer-contacts__wrapper {
+  background: map-get($gray, color_f0);
+  border-radius: 0.6rem;
+  padding: 1.5rem 1.2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  min-width: 49rem;
+
+  @include bp-desktopXS() {
+    padding-bottom: 4.5rem;
+  }
+
+  @include bp-tabletXS() {
+    padding-bottom: 1.5rem;
+    min-width: 100%;
+  }
+}
+
+.footer-contacts__item {
+  display: flex;
+
+  &:not(:last-of-type) {
+    flex-direction: column;
+  }
+
+  &:first-of-type {
+    a {
+      display: flex;
+      align-items: center;
+
+      svg {
+        margin-right: 1rem;
+      }
+    }
+
+    p {
+      margin-left: 3.2rem;
+    }
+  }
+
+  &:nth-child(3) {
+    justify-content: end;
+    margin-left: 3rem;
+  }
+
+  &:nth-child(4) {
+    align-items: end;
+    margin-right: 4.5rem;
+  }
+
+  a {
+    text-decoration: none;
+    color: map-get($basic, main);
+    transition: 0.3s;
+    font-size: 1.7rem;
+    font-weight: bold;
+
+    &:hover {
+      color: map-get($basic, hover-primary);
+    }
+  }
+
+  p {
+    margin: 0.4rem 0 0;
+  }
+
+  @include bp-desktopXS() {
+    &:nth-child(3) {
+      justify-content: flex-start;
+      margin-left: 0;
+    }
+
+    &:nth-child(4) {
+      align-items: flex-start;
+      margin-right: 0;
+    }
+  }
+
+  @include bp-tabletXS() {
+    width: calc(50% - 1.5rem);
+
+    &:nth-child(3) {
+      justify-content: end;
+      margin-left: 3rem;
+      margin-top: 2rem;
+    }
+
+    &:nth-child(4) {
+      align-items: end;
+    }
+  }
+
+
+  @include bp-mobile() {
+    width: 100%;
+
+    + .footer-contacts__item {
+      margin-top: 2rem;
+    }
+
+    &:nth-child(3) {
+      justify-content: start;
+      margin-left: 0;
+    }
+
+    &:first-of-type {
+      a svg {
+        display: none;
+      }
+
+      p {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+.footer-copyright {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10rem;
+  margin-bottom: 3rem;
+
+  @include bp-desktopXS() {
+    margin-top: 5rem;
+    flex-direction: column;
+  }
+
+  @include bp-tabletXS() {
+    margin-top: 3rem;
+  }
+}
+
+.footer-copyright__item {
+  width: calc(50% - 1rem);
+
+  p {
+    line-height: 2rem;
+    margin: 0;
+
+    a {
+      color: map-get($basic, hover-main);
+      transition: 0.3s;
+
+      &:hover {
+        color: map-get($basic, hover-primary);
+      }
+    }
+  }
+
+  &:last-of-type p {
+    text-align: right;
+    font-size: 1rem;
+    line-height: 1.3rem;
+  }
+
+  @include bp-desktopXS() {
+    width: 80%;
+
+    &:last-of-type {
+      margin-top: 5rem;
+
+      p {
+        text-align: left;
+      }
+    }
+  }
+
+  @include bp-tabletXS() {
+    width: 100%;
+  }
+
+  @include bp-mobile() {
+    &:last-of-type {
+      margin-top: 3rem;
+    }
+  }
 }
