@@ -11,9 +11,24 @@
   display: flex;
   padding-top: 5rem;
   border-top: 1px solid map-get($gray, color_d4);
+  margin-top: 5rem;
 
   @include bp-desktopXS() {
     flex-direction: column;
+  }
+
+  @include bp-tablet() {
+    padding-top: 3rem;
+  }
+
+  @include bp-tabletXS() {
+    margin-top: 4rem;
+  }
+
+  @include bp-mobile() {
+    margin-top: 3rem;
+    padding: 0;
+    border-top: none;
   }
 }
 

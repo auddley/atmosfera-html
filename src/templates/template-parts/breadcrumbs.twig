@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="breadcrumbs-wrapper">
+        {% if breadcrumbs %}
+            <div class="breadcrumbs scroll-x scroll-x_mobile">
+                <ul class="breadcrumbs__list">
+                    {% for item in breadcrumbs %}
+                        <li class="breadcrumbs__item">
+                            <a href="{{ item.href }}" class="breadcrumbs__link">{{ item.name }}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endif %}
+
+        {% if infoBreadcrumbs.text %}
+            <div class="breadcrumbs__subtitle">
+                <div class="breadcrumbs__subtitle-icon">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <path d="M0 6C0 2.68629 2.68629 0 6 0H26C29.3137 0 32 2.68629 32 6V26C32 29.3137 29.3137 32 26 32H6C2.68629 32 0 29.3137 0 26V6Z" fill="#029FE3"/>
+                        <path d="M17.1846 4.45455L16.9644 20.6591H14.4104L14.1903 4.45455H17.1846ZM15.6874 27.1761C15.1443 27.1761 14.6783 26.9816 14.2893 26.5927C13.9004 26.2037 13.7059 25.7377 13.7059 25.1946C13.7059 24.6515 13.9004 24.1855 14.2893 23.7965C14.6783 23.4076 15.1443 23.2131 15.6874 23.2131C16.2305 23.2131 16.6965 23.4076 17.0855 23.7965C17.4745 24.1855 17.6689 24.6515 17.6689 25.1946C17.6689 25.5542 17.5772 25.8845 17.3937 26.1854C17.2176 26.4863 16.9791 26.7285 16.6782 26.9119C16.3846 27.0881 16.0544 27.1761 15.6874 27.1761Z" fill="white"/>
+                    </svg>
+                </div>
+                <div class="breadcrumbs__subtitle-text">
+                    <p>{{ infoBreadcrumbs.text }}</p>
+                </div>
+            </div>
+        {% endif %}
+    </div>
+</div>

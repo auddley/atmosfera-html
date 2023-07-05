@@ -1,0 +1,65 @@
+.breadcrumbs-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  padding: 2.5rem 0 2rem;
+  border-bottom: 1px solid map-get($gray, color_d4);
+
+  @include bp-tablet() {
+    padding: 2rem 0 0;
+    border-bottom: none;
+  }
+
+  @include bp-tabletXS() {
+    display: none;
+  }
+}
+
+.breadcrumbs__list {
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.breadcrumbs__item {
+  list-style-type: none;
+  position: relative;
+
+  + .breadcrumbs__item {
+    padding-left: 1.5rem;
+
+    &::after {
+      content: "/";
+      position: absolute;
+      top: 50%;
+      left: 0.5rem;
+      color: map-get($basic, main);
+      transform: translateY(-50%);
+    }
+  }
+}
+
+.breadcrumbs__link {
+  text-decoration: none;
+  color: map-get($basic, main);
+  transition: 0.3s;
+
+  &:hover {
+    color: map-get($basic, hover-primary);
+  }
+}
+
+.breadcrumbs__subtitle {
+  display: flex;
+  align-items: center;
+  max-width: 40rem;
+}
+
+.breadcrumbs__subtitle-text {
+  margin-left: 1rem;
+
+  p {
+    margin: 0;
+    font-size: 1.2rem;
+  }
+}

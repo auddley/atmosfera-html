@@ -1,0 +1,282 @@
+.banner-constructor__wrapper {
+  background: rgba(map-get($basic, hover-primary), 0.1);
+  margin-bottom: 10rem;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    padding: 7rem 2rem 5rem;
+    position: relative;
+  }
+
+  @include bp-desktopXS() {
+    margin-bottom: 5rem;
+  }
+
+  @include bp-tablet() {
+    .container {
+      padding: 3rem 1rem 4rem;
+    }
+  }
+
+  @include bp-tabletXS() {
+    margin-bottom: 4rem;
+  }
+
+  @include bp-mobile() {
+    margin-bottom: 3rem;
+    overflow: hidden;
+
+    .container {
+      padding: 3rem 1rem;
+    }
+  }
+}
+
+.banner-constructor__text {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 70rem;
+  z-index: 5;
+
+  @include bp-tabletXS() {
+    width: 100%;
+  }
+
+  @include bp-mobile() {
+    &::after {
+      content: "";
+      background-image: url("images/constructor-3.svg");
+      background-repeat: no-repeat;
+      max-width: 100%;
+      width: 30rem;
+      height: 30rem;
+      background-size: contain;
+      position: absolute;
+      right: -12rem;
+      top: -10rem;
+    }
+  }
+}
+
+.banner-constructor__title {
+  font-size: 5.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  max-width: 50rem;
+  color: map-get($basic, primary);
+  margin-bottom: 2rem;
+
+  @include bp-tablet() {
+    font-size: 3.6rem;
+    max-width: 52rem;
+  }
+
+  @include bp-tabletXS() {
+    max-width: 45rem;
+  }
+
+  @include bp-mobile() {
+    font-size: 2.8rem;
+    position: relative;
+    z-index: 2;
+    padding-right: 8rem;
+  }
+}
+
+.banner-constructor__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @include bp-tablet() {
+    flex-direction: column;
+    position: relative;
+    z-index: 2;
+  }
+}
+
+.banner-constructor__item {
+  width: calc(50% - 1rem);
+  color: $color-black;
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding-left: 1.8rem;
+  position: relative;
+  margin-top: 2rem;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0.5rem;
+    left: 0;
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 50%;
+    background: map-get($basic, hover-primary);
+  }
+
+  @include bp-tablet() {
+    width: 100%;
+    margin-top: 1rem;
+  }
+}
+
+.banner-constructor__subtitle {
+  color: $color-black;
+  font-size: 1.7rem;
+  width: 35rem;
+  top: 1.5rem;
+  position: absolute;
+  left: 25rem;
+
+  @include bp-desktopXS() {
+    position: relative;
+    left: 0;
+    top: 0;
+    margin-bottom: 3.5rem;
+  }
+
+  @include bp-mobile() {
+    width: 100%;
+    margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 2;
+    padding-right: 8rem;
+  }
+
+  @include bp-mobileXS() {
+    padding-right: 0;
+  }
+}
+
+.banner-constructor__img-wrapper {
+  width: 46rem;
+  height: 46rem;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 2;
+
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  @include bp-tablet() {
+    width: 32rem;
+    height: 32rem;
+  }
+
+  @include bp-tabletXS() {
+    width: 21rem;
+    height: 21rem;
+  }
+}
+
+.banner-constructor__img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+
+  &::after {
+    content: "";
+    background-image: url("images/constructor-1.svg");
+    background-repeat: no-repeat;
+    width: 43rem;
+    height: 40rem;
+    max-width: 100%;
+    background-size: contain;
+    position: absolute;
+    left: -15rem;
+  }
+
+  &::before {
+    content: "";
+    background-image: url("images/constructor-2.svg");
+    background-repeat: no-repeat;
+    width: 11rem;
+    height: 11rem;
+    max-width: 100%;
+    background-size: contain;
+    position: absolute;
+    right: 0;
+    top: 3.7rem;
+    z-index: 3;
+  }
+
+  @include bp-tablet() {
+    &::after {
+      width: 33rem;
+      height: 31rem;
+      left: -11rem;
+    }
+
+    &::before {
+      width: 6.5rem;
+      height: 6.5rem;
+      top: 0;
+      right: 2rem;
+    }
+  }
+
+  @include bp-tabletXS() {
+    &::after {
+      left: -8rem;
+    }
+  }
+
+  @include bp-mobile() {
+    display: none;
+  }
+}
+
+.banner-constructor__link {
+  color: white;
+  text-decoration: none;
+  background: map-get($basic, hover-main);
+  display: flex;
+  justify-content: space-between;
+  font-weight: 500;
+  font-size: 1.6rem;
+  width: 22rem;
+  padding: 0.7rem 1rem;
+  align-items: center;
+  border-radius: 0.6rem;
+  margin-top: auto;
+  margin-bottom: 3.5rem;
+  transition: 0.3s;
+
+  span {
+    display: inline-block;
+    max-width: 12rem;
+  }
+
+  &:hover {
+    background: map-get($basic, hover-primary);
+  }
+
+  @include bp-desktopXS() {
+    margin: 4.5rem 0 0;
+  }
+
+  @include bp-tabletXS() {
+    position: absolute;
+    margin: 0;
+    bottom: -2rem;
+    left: 97%;
+  }
+
+  @include bp-mobile() {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    margin-top: 4rem;
+  }
+}
+
