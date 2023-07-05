@@ -1,0 +1,37 @@
+<div class="catalog__wrapper {% if catalogMain.greyBg %}bg-grey{% endif %}">
+    <div class="container">
+        <div class="catalog__header">
+            <div class="catalog__title">
+                <h2>{{ catalogMain.title }}</h2>
+                <div class="catalog__svg">{{ catalogMain.svg }}</div>
+            </div>
+            <div class="catalog__img-list">
+                {% for itemImg in catalogImg %}
+                    <a href="{{ itemImg.href }}" class="catalog__img-item">
+                        <div class="catalog__img-wrapper">
+                            <img src="{{ itemImg.img }}" alt="">
+                        </div>
+                        <p>{{ itemImg.title }}</p>
+                    </a>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="catalog__body js-catalog">
+            <div class="catalog__subtitle">
+                <span>{{ catalogMain.subtitle }}</span>
+                <svg width="19" height="14" viewBox="0 0 19 14" fill="none">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.2796 0.120643C12.0701 -0.0592371 11.7544 -0.0352106 11.5745 0.174307C11.3946 0.383826 11.4187 0.699495 11.6282 0.879375L16.5826 5.13291C16.9699 5.46543 17.2324 5.91365 17.3366 6.40444H0.5C0.223858 6.40444 0 6.6283 0 6.90444C0 7.18058 0.223858 7.40444 0.5 7.40444H17.3272C17.2173 7.87876 16.9588 8.31094 16.5826 8.63395L11.6282 12.8875C11.4187 13.0674 11.3946 13.383 11.5745 13.5925C11.7544 13.8021 12.0701 13.8261 12.2796 13.6462L17.234 9.39268C17.9658 8.7644 18.3868 7.84794 18.3868 6.88343C18.3868 5.91891 17.9658 5.00246 17.234 4.37417L12.2796 0.120643Z" fill="#34495E"/>
+                </svg>
+            </div>
+            <div class="catalog__links-list">
+                {% for itemLinks in catalogLinks %}
+                    <div class="catalog__links-col">
+                        {% for el in itemLinks %}
+                            <a href="{{ el.href }}" class="catalog__links-item">{{ el.title }}</a>
+                        {% endfor %}
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>

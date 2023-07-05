@@ -6,6 +6,7 @@
 @import "fonts";
 @import "variables";
 @import "common";
+@import "articles";
 
 // ------------------------------------------ //
 // UI
@@ -18,6 +19,7 @@
 // ------------------------------------------ //
 @import "template-parts/header";
 @import "template-parts/footer";
+@import "template-parts/breadcrumbs";
 
 // ------------------------------------------ //
 // popups
@@ -29,4 +31,12 @@
 // ------------------------------------------ //
 @import "blocks/popup";
 @import "blocks/scroll-top";
-
+@import "blocks/banner";
+@import "blocks/advantages";
+@import "blocks/text-info";
+@import "blocks/slider-4items";
+@import "blocks/links-list";
+@import "blocks/banner-constructor";
+@import "blocks/advantages-list";
+@import "blocks/portfolio";
+@import "blocks/catalog";
