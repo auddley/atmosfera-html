@@ -1,3 +1,300 @@
-<div class="container">
-    Main page
-</div>
+{% set infoBreadcrumbs = {
+        text: 'В СВЯЗИ С НЕСТАБИЛЬНЫМ КУРСОМ ВАЛЮТЫ СТОИМОСТЬ УТОЧНЯЙТЕ У МЕНЕДЖЕРА. МИНИМАЛЬНЫЙ ЗАКАЗ 800 руб.',
+} %}
+
+{% include '../template-parts/breadcrumbs.twig' with {
+    breadcrumbs: breadcrumbs,
+    infoBreadcrumbs: infoBreadcrumbs
+} %}
+
+<div class="container">{% include '../blocks/banner.twig' %}</div>
+<div class="container">{% include '../blocks/advantages.twig' %}</div>
+<div class="container">{% include '../blocks/text-info.twig' %}</div>
+<div class="container">{% include '../blocks/slider-4items.twig' %}</div>
+<div class="container">{% include '../blocks/links-list.twig' %}</div>
+
+{% set catalogMain1 = {
+    greyBg: true,
+    title: 'Цифровая и офсетная печать',
+    svg: '<svg width="74" height="14" viewBox="0 0 74 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14 7C14 10.866 10.866 14 7 14C3.13401 14 0 10.866 0 7C0 3.13401 3.13401 0 7 0C10.866 0 14 3.13401 14 7Z" fill="#029FE3"/><path d="M34 7C34 10.866 30.866 14 27 14C23.134 14 20 10.866 20 7C20 3.13401 23.134 0 27 0C30.866 0 34 3.13401 34 7Z" fill="#E2017B"/><path d="M54 7C54 10.866 50.866 14 47 14C43.134 14 40 10.866 40 7C40 3.13401 43.134 0 47 0C50.866 0 54 3.13401 54 7Z" fill="#FFEB00"/><path d="M74 7C74 10.866 70.866 14 67 14C63.134 14 60 10.866 60 7C60 3.13401 63.134 0 67 0C70.866 0 74 3.13401 74 7Z" fill="black"/></svg>',
+    subtitle: 'Другая продукция:',
+} %}
+
+{% set catalogImg1 = [
+    {
+        img: './assets/images/catalog-1.jpg',
+        title: 'Визитки',
+        href: '#',
+    },
+    {
+        img: './assets/images/catalog-2.jpg',
+        title: 'Листовки',
+        href: '#',
+    },
+    {
+        img: './assets/images/catalog-3.jpg',
+        title: 'Наклейки',
+        href: '#',
+    },
+    {
+        img: './assets/images/catalog-1.jpg',
+        title: 'Пакеты бумажные',
+        href: '#',
+    },
+    {
+        img: './assets/images/catalog-2.jpg',
+        title: 'Пакеты полиэтиленовые',
+        href: '#',
+    },
+    {
+        img: './assets/images/catalog-3.jpg',
+        title: 'Сертификаты',
+        href: '#',
+    },
+    {
+        img: './assets/images/catalog-2.jpg',
+        title: 'Буклеты',
+        href: '#',
+    },
+] %}
+
+{% set catalogLinks1 = [
+    [
+        {
+            title: '3D наклейки',
+            href: '#',
+        },
+        {
+            title: 'Бейдж',
+            href: '#',
+        },
+        {
+            title: 'Билеты',
+            href: '#',
+        },
+        {
+            title: 'Блокноты',
+            href: '#',
+        },
+        {
+            title: 'Брошюра, каталог',
+            href: '#',
+        },
+        {
+            title: 'Визитка NFC',
+            href: '#',
+        },
+        {
+            title: 'Диплом',
+            href: '#',
+        },
+        {
+            title: 'Инстаграм визитка',
+            href: '#',
+        },
+        {
+            title: 'Книги',
+            href: '#',
+        },
+        {
+            title: 'Конверты',
+            href: '#',
+        },
+        {
+            title: 'Меню',
+            href: '#',
+        },
+    ],
+    [
+        {
+            title: 'Оперативная печать',
+            href: '#',
+        },
+        {
+            title: 'Открытки, пригласительные',
+            href: '#',
+        },
+        {
+            title: 'Офсетная печать',
+            href: '#',
+        },
+        {
+            title: 'Папка фолдер',
+            href: '#',
+        },
+        {
+            title: 'Печати и штампы',
+            href: '#',
+        },
+        {
+            title: 'Плакат, афиша',
+            href: '#',
+        },
+        {
+            title: 'Пластиковые карты',
+            href: '#',
+        },
+        {
+            title: 'Подложка на стол, плейсменты',
+            href: '#',
+        },
+        {
+            title: 'Полиграфия',
+            href: '#',
+        },
+    ],
+    [
+        {
+            title: 'Ризограф (документы, бланки)',
+            href: '#',
+        },
+        {
+            title: 'Самокопир',
+            href: '#',
+        },
+        {
+            title: 'Сборные тиражи',
+            href: '#',
+        },
+        {
+            title: 'Свадебная полиграфия',
+            href: '#',
+        },
+        {
+            title: 'Сертификаты',
+            href: '#',
+        },
+        {
+            title: 'Стикерпаки и стикербуки',
+            href: '#',
+        },
+        {
+            title: 'Тату переводные',
+            href: '#',
+        },
+        {
+            title: 'Хенгеры, крючки на дверь',
+            href: '#',
+        },
+        {
+            title: 'Цифровая печать',
+            href: '#',
+        },
+    ],
+] %}
+
+{% include '../blocks/catalog.twig' with {
+    catalogMain: catalogMain1,
+    catalogImg: catalogImg1,
+    catalogLinks: catalogLinks1,
+} %}
+
+{% set catalogMain2 = {
+    greyBg: false,
+    title: 'Вывески',
+    svg: '<svg width="74" height="34" viewBox="0 0 74 34" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14 27C14 30.866 10.866 34 7 34C3.13401 34 0 30.866 0 27C0 23.134 3.13401 20 7 20C10.866 20 14 23.134 14 27Z" fill="#FFEB00"/><path d="M74 7C74 10.866 70.866 14 67 14C63.134 14 60 10.866 60 7C60 3.13401 63.134 0 67 0C70.866 0 74 3.13401 74 7Z" fill="#E2017B"/><path d="M34 27C34 30.866 30.866 34 27 34C23.134 34 20 30.866 20 27C20 23.134 23.134 20 27 20C30.866 20 34 23.134 34 27Z" fill="black"/><path d="M0 7C0 3.13401 3.13401 0 7 0H47C50.866 0 54 3.13401 54 7C54 10.866 50.866 14 47 14H7C3.13401 14 0 10.866 0 7Z" fill="#029FE3"/></svg>',
+    subtitle: 'Другая продукция:',
+} %}
+
+{% set catalogImg2 = [
+    {
+        img: './assets/images/catalog-1.jpg',
+        title: 'Визитки',
+        href: '#',
+    },
+    {
+        img: './assets/images/catalog-2.jpg',
+        title: 'Листовки',
+        href: '#',
+    },
+    {
+        img: './assets/images/catalog-3.jpg',
+        title: 'Наклейки',
+        href: '#',
+    },
+    {
+        img: './assets/images/catalog-1.jpg',
+        title: 'Пакеты бумажные',
+        href: '#',
+    },
+    {
+        img: './assets/images/catalog-2.jpg',
+        title: 'Пакеты полиэтиленовые',
+        href: '#',
+    },
+    {
+        img: './assets/images/catalog-3.jpg',
+        title: 'Сертификаты',
+        href: '#',
+    },
+    {
+        img: './assets/images/catalog-2.jpg',
+        title: 'Буклеты',
+        href: '#',
+    },
+] %}
+
+{% set catalogLinks2 = [
+    [
+        {
+            title: 'Аптечный крест',
+            href: '#',
+        },
+        {
+            title: 'Брендирование автомобиля',
+            href: '#',
+        },
+        {
+            title: 'Буквы и фигуры из пластика',
+            href: '#',
+        },
+        {
+            title: 'Входная группа',
+            href: '#',
+        },
+        {
+            title: 'Вывески',
+            href: '#',
+        },
+        {
+            title: 'Изделия из пенопласта и полистирола',
+            href: '#',
+        },
+    ],
+    [
+        {
+            title: 'Монтажные работы',
+            href: '#',
+        },
+        {
+            title: 'Навигация',
+            href: '#',
+        },
+        {
+            title: 'Наружная реклама',
+            href: '#',
+        },
+        {
+            title: 'Оформление витрин',
+            href: '#',
+        },
+        {
+            title: 'Световые буквы',
+            href: '#',
+        },
+        {
+            title: 'Световые панели ”клик” и ”кристал”',
+            href: '#',
+        },
+    ],
+] %}
+
+{% include '../blocks/catalog.twig' with {
+    catalogMain: catalogMain2,
+    catalogImg: catalogImg2,
+    catalogLinks: catalogLinks2,
+} %}
+
+{% include '../blocks/banner-constructor.twig' %}
+<div class="container">{% include '../blocks/advantages-list.twig' %}</div>
+<div class="container">{% include '../blocks/portfolio.twig' %}</div>
