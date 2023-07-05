@@ -30,17 +30,19 @@
   flex-direction: column;
   flex-shrink: 0;
 
-  &:hover {
-    .slider-img {
-      opacity: 0.5;
+  @include bp-tablet(min) {
+    &:hover {
+      .slider-img {
+        opacity: 0.5;
 
-      img {
-        transform: scale(1.05);
+        img {
+          transform: scale(1.05);
+        }
       }
-    }
 
-    .slider-title {
-      color: map-get($basic, hover-primary);
+      .slider-title {
+        color: map-get($basic, hover-primary);
+      }
     }
   }
 

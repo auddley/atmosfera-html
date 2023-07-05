@@ -14,7 +14,7 @@
                     delay: 3000,
                 },
                 loop: true,
-                slidesPerView: 'auto',
+                slidesPerView: 1,
                 breakpoints: {
                     320: {
                         pagination: false,
