@@ -224,6 +224,7 @@
     text-decoration: none;
     color: map-get($basic, main);
     transition: 0.3s;
+    font-family: $font1;
 
     &:hover {
       color: map-get($basic, hover-primary);
