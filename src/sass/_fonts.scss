@@ -1,4 +1,10 @@
 /*Manrope*/
-@include font-face("ProximaNova", "fonts/Manrope/Manrope-Regular", 400);
-@include font-face("ProximaNova", "fonts/Manrope/Manrope-Medium", 500);
-@include font-face("ProximaNova", "fonts/Manrope/Manrope-Bold", 700);
+@include font-face("Manrope", "fonts/Manrope/Manrope-Regular", 400);
+@include font-face("Manrope", "fonts/Manrope/Manrope-Medium", 500);
+@include font-face("Manrope", "fonts/Manrope/Manrope-Bold", 700);
+
+/*Inter*/
+@include font-face("Inter", "fonts/Inter/Inter-Regular", 400);
+@include font-face("Inter", "fonts/Inter/Inter-Medium", 500);
+@include font-face("Inter", "fonts/Inter/Inter-SemiBold", 600);
+@include font-face("Inter", "fonts/Inter/Inter-Bold", 700);

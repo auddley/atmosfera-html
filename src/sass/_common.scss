@@ -18,7 +18,7 @@ body {
   color: map-get($basic, main);
   font-size: 13px;
   overflow-x: hidden;
-  font-family: $font1;
+  font-family: $font2;
 
   &.no-scroll {
     overflow-y: hidden;
