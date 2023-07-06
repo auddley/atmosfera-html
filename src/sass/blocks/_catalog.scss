@@ -97,6 +97,16 @@
   }
 }
 
+.catalog__svg {
+  @include bp-mobile() {
+    max-width: 5rem;
+
+    svg {
+      width: 100%;
+    }
+  }
+}
+
 .catalog__img-list {
   display: flex;
   justify-content: space-between;
