@@ -132,6 +132,7 @@
 
 .footer-contacts__item {
   display: flex;
+  margin-left: 0;
 
   &:not(:last-of-type) {
     flex-direction: column;
