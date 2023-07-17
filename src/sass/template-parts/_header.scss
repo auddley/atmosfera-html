@@ -110,6 +110,16 @@
 }
 
 .header-menu__wrapper {
+  margin-bottom: 2.5rem;
+
+  @include bp-tablet() {
+    margin-bottom: 2rem;
+  }
+
+  @include bp-tabletXS() {
+    margin-bottom: 0;
+  }
+
   .container {
     display: flex;
     flex-direction: column;

@@ -1,0 +1,32 @@
+.tabs-btn {
+  border-radius: 0.6rem;
+  background: map-get($gray, color_f0);
+  color: map-get($basic, primary);
+  padding: 0.9rem 1.3rem;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+
+  + .tabs-btn {
+    margin-left: 1.2rem;
+  }
+
+  &.active {
+    background: map-get($basic, hover-main);
+    color: $color-white;
+    cursor: default;
+  }
+
+  &:hover {
+    background: map-get($basic, hover-main);
+    color: $color-white;
+  }
+}
+
+.tabs-content {
+  display: none;
+
+  &.active {
+    display: block;
+  }
+}

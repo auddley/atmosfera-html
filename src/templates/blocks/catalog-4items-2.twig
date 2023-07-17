@@ -1,0 +1,48 @@
+{% set listItems = [
+    {
+        img: './assets/images/catalog-1.jpg',
+        title: 'Дизайнерская бумага',
+        price: '16,8',
+        href: '#',
+    },
+    {
+        img: './assets/images/catalog-1.jpg',
+        title: 'Шелкография',
+        price: '19,8',
+        href: '#',
+    },
+    {
+        img: './assets/images/catalog-1.jpg',
+        title: 'Тиснение',
+        price: '26,8',
+        href: '#',
+    },
+    {
+        img: './assets/images/catalog-1.jpg',
+        title: 'Конгрев',
+        price: '26,8',
+        href: '#',
+    },
+] %}
+
+<div class="catalog-4items__wrapper">
+    <div class="catalog-4items__title"><h2>Посмотрите также другие виды визиток</h2></div>
+    <div class="catalog-items__list">
+        {% for el in listItems %}
+            <div class="catalog-items__item">
+                <div class="catalog-items__img">
+                    <img src="{{ el.img }}" alt="">
+                </div>
+
+                <h3 class="catalog-items__title catalog-items__title_min">{{ el.title }}</h3>
+                <div class="catalog-items__price"><span>{{ el.price }}</span> руб./шт</div>
+                <a href="{{ el.href }}" class="catalog-items__link">
+                    <span>Заказать</span>
+                    <svg width="25" height="20" viewBox="0 0 25 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M16.4296 1.03401C16.0105 0.67425 15.3792 0.722303 15.0194 1.14134C14.6597 1.56038 14.7077 2.19171 15.1268 2.55147L21.4967 8.0203C21.8181 8.29629 22.0636 8.64276 22.218 9.02701H1.05176C0.499473 9.02701 0.0517578 9.47473 0.0517578 10.027C0.0517578 10.5793 0.499473 11.027 1.05176 11.027H22.1956C22.0403 11.3897 21.803 11.7167 21.4967 11.9797L15.1268 17.4485C14.7077 17.8083 14.6597 18.4396 15.0194 18.8587C15.3792 19.2777 16.0105 19.3257 16.4296 18.966L22.7995 13.4972C23.8194 12.6215 24.4062 11.3442 24.4062 10C24.4062 8.65575 23.8194 7.37848 22.7995 6.50284L16.4296 1.03401Z" fill="currentColor"/>
+                    </svg>
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+</div>

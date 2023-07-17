@@ -2,12 +2,14 @@
   display: flex;
   justify-content: space-between;
   align-items: end;
-  padding: 2.5rem 0 2rem;
+  padding: 0 0 2rem;
+  margin-bottom: 3.5rem;
   border-bottom: 1px solid map-get($gray, color_d4);
 
   @include bp-tablet() {
-    padding: 2rem 0 0;
+    padding: 0;
     border-bottom: none;
+    margin-bottom: 2rem;
   }
 
   @include bp-tabletXS() {
@@ -52,7 +54,7 @@
 .breadcrumbs__subtitle {
   display: flex;
   align-items: center;
-  max-width: 40rem;
+  max-width: 41rem;
 }
 
 .breadcrumbs__subtitle-text {
