@@ -1,7 +1,7 @@
 .banner__wrapper {
   display: flex;
   justify-content: space-between;
-  margin: 3.5rem 0 4rem;
+  margin: 0 0 4rem;
 
   .slider {
     width: calc(50% - 0.5rem);
@@ -127,7 +127,7 @@
   }
 
   @include bp-tablet() {
-    margin: 2rem 0 3rem;
+    margin: 0 0 3rem;
   }
 
   @include bp-mobile() {

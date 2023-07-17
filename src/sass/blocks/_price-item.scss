@@ -1,0 +1,163 @@
+.price-item__wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10rem;
+
+  @include bp-tablet() {
+    margin-bottom: 7rem;
+  }
+
+  @include bp-tabletXS() {
+    margin-bottom: 4rem;
+  }
+
+  @include bp-mobile() {
+    margin-bottom: 3rem;
+  }
+}
+
+.price-item__title {
+  margin-bottom: 4rem;
+
+  h2 {
+    margin-bottom: 1.5rem;
+  }
+
+  h3 {
+    margin: 0;
+
+    span {
+      &.pink {
+        color: map-get($basic, hover-main);
+      }
+
+      &.regular {
+        font-weight: normal;
+      }
+    }
+  }
+
+  @include bp-tablet() {
+    margin-bottom: 2rem;
+
+    h2 {
+      margin-bottom: 1rem;
+    }
+  }
+
+  @include bp-mobile() {
+    h3 {
+      font-size: 1.3rem;
+    }
+  }
+}
+
+.price-item__table {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 1;
+  width: 100%;
+
+  .price-list__item-col:nth-child(1) {
+    width: 27%;
+  }
+
+  .price-list__item-col:nth-child(4) {
+    width: 38%;
+  }
+
+  .price-list__item-col:nth-child(2) {
+    width: 20%;
+  }
+
+  .price-list__item-col:nth-child(3) {
+    text-align: right;
+    width: 15%;
+  }
+
+  @include bp-desktopXS() {
+    .price-list__item-col:nth-child(3) {
+      display: none;
+    }
+
+    .price-list__item-col:nth-child(1),
+    .price-list__item-col:nth-child(2),
+    .price-list__item-col:nth-child(4) {
+      width: 33%;
+    }
+  }
+
+  @include bp-mobile() {
+    order: 2;
+    margin-top: 1rem;
+
+    .price-list__item-col:nth-child(1),
+    .price-list__item-col:nth-child(2) {
+      width: 45%;
+    }
+
+    .price-list__item-col:nth-child(4) {
+      width: 3.2rem;
+    }
+  }
+}
+
+.price-item__content {
+  display: flex;
+  justify-content: space-between;
+
+  @include bp-mobile() {
+    flex-direction: column;
+  }
+}
+
+.price-item__img {
+  min-width: 34rem;
+  height: 34rem;
+  display: flex;
+  justify-content: flex-end;
+  margin-left: 2rem;
+
+  img {
+    width: 100%;
+    object-fit: contain;
+    border-radius: 0.6rem;
+  }
+
+  @include bp-desktop() {
+    min-width: 28rem;
+  }
+
+  @include bp-tablet() {
+    min-width: 23rem;
+    height: 25rem;
+    margin-left: 1rem;
+  }
+
+  @include bp-mobile() {
+    min-width: 100%;
+    justify-content: start;
+    margin: 0;
+    height: 20rem;
+
+    &.mob-cover img {
+      object-fit: cover;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.price-item__info {
+  margin-top: 4rem;
+
+  ul {
+    margin: 0;
+  }
+
+  @include bp-mobile() {
+    margin-top: 2rem;
+  }
+}

@@ -1,0 +1,35 @@
+{% set listItems = [
+    {
+        img: './assets/images/catalog-1.jpg',
+        title: 'Скошенные углы',
+        price: '16,8',
+    },
+    {
+        img: './assets/images/catalog-2.jpg',
+        title: 'Визитница настенная',
+        price: '19,8',
+    },
+    {
+        img: './assets/images/catalog-1.jpg',
+        title: 'Визитница настенная',
+        price: '26,8',
+    },
+] %}
+
+<div class="catalog-3items__wrapper options-list">
+    <div class="catalog-3items__label">
+        <h2>Дополнительные опции</h2>
+    </div>
+    <div class="catalog-items__list">
+        {% for el in listItems %}
+            <div class="catalog-items__item">
+                <div class="catalog-items__img">
+                    <img src="{{ el.img }}" alt="">
+                </div>
+
+                <h3 class="catalog-items__title catalog-items__title_min">{{ el.title }}</h3>
+                <div class="catalog-items__price"><span>{{ el.price }}</span> руб./шт</div>
+            </div>
+        {% endfor %}
+    </div>
+</div>

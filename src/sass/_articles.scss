@@ -13,3 +13,17 @@ h2 {
     font-size: 2.2rem;
   }
 }
+
+h3 {
+  font-family: $font1;
+  font-size: 2.2rem;
+  font-weight: 700;
+
+  @include bp-tablet() {
+    font-size: 1.7rem;
+  }
+}
+
+ul {
+  padding-left: 1rem;
+}

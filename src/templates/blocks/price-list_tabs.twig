@@ -1,0 +1,170 @@
+{% set priceList1 = [
+    {
+        value: '96',
+        price: '6,0',
+        time: '1-2 дней',
+        href: '#',
+    },
+    {
+        value: '192',
+        price: '5,0',
+        time: '1-2 дней',
+        href: '#',
+    },
+    {
+        value: '288',
+        price: '4,8',
+        time: '1-2 дней',
+        href: '#',
+    },
+    {
+        value: '384',
+        price: '4,6',
+        time: '1-2 дней',
+        href: '#',
+    },
+    {
+        value: '96',
+        price: '6,0',
+        time: '1-2 дней',
+        href: '#',
+    },
+    {
+        value: '192',
+        price: '5,0',
+        time: '1-2 дней',
+        href: '#',
+    },
+    {
+        value: '288',
+        price: '4,8',
+        time: '1-2 дней',
+        href: '#',
+    },
+    {
+        value: '384',
+        price: '4,6',
+        time: '1-2 дней',
+        href: '#',
+    },
+] %}
+
+{% set priceList2 = [
+    {
+        value: '96',
+        price: '10,0',
+        time: '4-5 дней',
+        href: '#',
+    },
+    {
+        value: '192',
+        price: '15,0',
+        time: '4-5 дней',
+        href: '#',
+    },
+    {
+        value: '288',
+        price: '24,8',
+        time: '4-5 дней',
+        href: '#',
+    },
+    {
+        value: '384',
+        price: '54,6',
+        time: '4-5 дней',
+        href: '#',
+    },
+    {
+        value: '96',
+        price: '66,0',
+        time: '4-5 дней',
+        href: '#',
+    },
+    {
+        value: '192',
+        price: '85,0',
+        time: '4-5 дней',
+        href: '#',
+    },
+    {
+        value: '288',
+        price: '94,8',
+        time: '4-5 дней',
+        href: '#',
+    },
+    {
+        value: '384',
+        price: '94,6',
+        time: '4-5 дней',
+        href: '#',
+    },
+] %}
+
+<div class="price-list__wrapper js-tabs">
+    <div class="price-list__label">
+        <h2>Листовки А6 (2105X148 мм) </h2>
+        <h3>Бумага  115 г/м2</h3>
+    </div>
+
+    <div class="price-list__tabs tabs-controllers">
+        <span>Вариант печати:</span>
+        <button class="tabs-btn active">односторонний</button>
+        <button class="tabs-btn">двухсторонний</button>
+    </div>
+
+    <div class="js-price-list tabs-content active">
+        <div class="price-list__list">
+            <div class="price-list__item">
+                <div class="price-list__item-col">Тираж</div>
+                <div class="price-list__item-col">Цена</div>
+                <div class="price-list__item-col">Срок изготовления</div>
+            </div>
+
+            {% for el in priceList1 %}
+                <div class="price-list__item">
+                    <div class="price-list__item-col price-list__item-value">{{ el.value }} шт</div>
+                    <div class="price-list__item-col price-list__item-price"><span>{{ el.price }}</span> руб./шт</div>
+                    <div class="price-list__item-col price-list__item-time">{{ el.time }}</div>
+                    <div class="price-list__item-col price-list__item-link">
+                        <a href="{{ el.href }}">
+                            <span>Заказать</span>
+                            <svg width="25" height="20" viewBox="0 0 25 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M16.4296 1.03401C16.0105 0.67425 15.3792 0.722303 15.0194 1.14134C14.6597 1.56038 14.7077 2.19171 15.1268 2.55147L21.4967 8.0203C21.8181 8.29629 22.0636 8.64276 22.218 9.02701H1.05176C0.499473 9.02701 0.0517578 9.47473 0.0517578 10.027C0.0517578 10.5793 0.499473 11.027 1.05176 11.027H22.1956C22.0403 11.3897 21.803 11.7167 21.4967 11.9797L15.1268 17.4485C14.7077 17.8083 14.6597 18.4396 15.0194 18.8587C15.3792 19.2777 16.0105 19.3257 16.4296 18.966L22.7995 13.4972C23.8194 12.6215 24.4062 11.3442 24.4062 10C24.4062 8.65575 23.8194 7.37848 22.7995 6.50284L16.4296 1.03401Z" fill="currentColor"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+
+        <div class="price-list__btn-open js-btn-price-list">Выбрать еще ▾</div>
+    </div>
+
+    <div class="js-price-list tabs-content">
+        <div class="price-list__list">
+            <div class="price-list__item">
+                <div class="price-list__item-col">Тираж</div>
+                <div class="price-list__item-col">Цена</div>
+                <div class="price-list__item-col">Срок изготовления</div>
+            </div>
+
+            {% for el in priceList2 %}
+                <div class="price-list__item">
+                    <div class="price-list__item-col price-list__item-value">{{ el.value }} шт</div>
+                    <div class="price-list__item-col price-list__item-price"><span>{{ el.price }}</span> руб./шт</div>
+                    <div class="price-list__item-col price-list__item-time">{{ el.time }}</div>
+                    <div class="price-list__item-col price-list__item-link">
+                        <a href="{{ el.href }}">
+                            <span>Заказать</span>
+                            <svg width="25" height="20" viewBox="0 0 25 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M16.4296 1.03401C16.0105 0.67425 15.3792 0.722303 15.0194 1.14134C14.6597 1.56038 14.7077 2.19171 15.1268 2.55147L21.4967 8.0203C21.8181 8.29629 22.0636 8.64276 22.218 9.02701H1.05176C0.499473 9.02701 0.0517578 9.47473 0.0517578 10.027C0.0517578 10.5793 0.499473 11.027 1.05176 11.027H22.1956C22.0403 11.3897 21.803 11.7167 21.4967 11.9797L15.1268 17.4485C14.7077 17.8083 14.6597 18.4396 15.0194 18.8587C15.3792 19.2777 16.0105 19.3257 16.4296 18.966L22.7995 13.4972C23.8194 12.6215 24.4062 11.3442 24.4062 10C24.4062 8.65575 23.8194 7.37848 22.7995 6.50284L16.4296 1.03401Z" fill="currentColor"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+
+        <div class="price-list__btn-open js-btn-price-list">Выбрать еще ▾</div>
+    </div>
+</div>

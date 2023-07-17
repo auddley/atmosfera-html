@@ -1,0 +1,168 @@
+.price-list__wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10rem;
+
+  @include bp-tablet() {
+    margin-bottom: 7rem;
+  }
+
+  @include bp-tabletXS() {
+    flex-wrap: wrap;
+    margin-bottom: 4rem;
+  }
+
+  @include bp-mobile() {
+    margin-bottom: 3rem;
+  }
+}
+
+.price-list__label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 4rem;
+
+  h2 {
+    margin-bottom: 1.4rem;
+  }
+
+  h3 {
+    margin: 0;
+
+    span {
+      font-weight: normal;
+    }
+  }
+
+  @include bp-tablet() {
+    margin-bottom: 3rem;
+  }
+
+  @include bp-mobile() {
+    margin-bottom: 2rem;
+
+    h3 {
+      font-size: 1.3rem;
+    }
+  }
+}
+
+.price-list__tabs {
+  display: flex;
+  align-items: center;
+
+  span {
+    display: inline-block;
+    margin-right: 2rem;
+  }
+
+  @include bp-mobile() {
+    flex-wrap: wrap;
+
+    span {
+      width: 100%;
+      margin: 0 0 1rem;
+    }
+  }
+}
+
+.price-list__list {
+  flex-direction: column;
+  transition: 0.3s;
+  border-bottom: 1px solid map-get($gray, color_d4);
+}
+
+.tabs-content .price-list__list {
+  margin-top: 2.5rem;
+}
+
+.price-list__item {
+  display: flex;
+  align-items: center;
+  border-top: 1px solid map-get($gray, color_d4);
+  padding: 1rem 0;
+
+  &:first-of-type {
+    border-top: none;
+  }
+}
+
+.price-list__item-col {
+  width: calc(25% - 0.5rem);
+  margin-left: 0.5rem;
+
+  @include bp-mobile() {
+    width: 45%;
+
+    &:nth-child(3) {
+      display: none;
+    }
+  }
+}
+
+.price-list__item-link {
+  display: flex;
+  justify-content: flex-end;
+
+  a {
+    background: map-get($gray, color_f0);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+    color: map-get($basic, main);
+    border-radius: 0.6rem;
+    padding: 0.7rem 1rem;
+    width: 17rem;
+    transition: 0.3s;
+
+    &:hover {
+      background: map-get($basic, hover-main);
+      color: $color-white;
+    }
+  }
+
+  @include bp-mobile() {
+    width: 3.2rem;
+    margin-left: auto;
+
+    a {
+      width: 3.2rem;
+      padding: 0.7rem;
+
+      span {
+        display: none;
+      }
+    }
+  }
+}
+
+.price-list__item-value {
+  font-family: $font1;
+  font-size: 2.2rem;
+
+  @include bp-mobile() {
+    font-size: 1.8rem;
+  }
+}
+
+.price-list__item-price {
+  color: map-get($basic, hover-main);
+
+  span {
+    font-family: $font1;
+    font-size: 2.2rem;
+    font-weight: 700;
+  }
+
+  @include bp-mobile() {
+    span {
+      font-size: 1.8rem;
+    }
+  }
+}
+
+.price-list__btn-open {
+  cursor: pointer;
+  padding: 1.5rem 0;
+}
