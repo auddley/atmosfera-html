@@ -129,39 +129,55 @@
 
 .price-item__img {
   min-width: 34rem;
-  height: 34rem;
+  max-width: 34rem;
   display: flex;
   justify-content: flex-end;
   margin-left: 2rem;
 
+  &.fix-height {
+    height: 34rem;
+
+    img {
+      width: 100%;
+    }
+  }
+
   img {
-    width: 100%;
     object-fit: contain;
     border-radius: 0.6rem;
   }
 
   @include bp-desktop() {
     min-width: 28rem;
-    height: 28rem;
+    max-width: 28rem;
+
+    &.fix-height {
+      height: 28rem;
+    }
   }
 
   @include bp-tablet() {
     min-width: 23rem;
-    height: 23rem;
+    max-width: 23rem;
     margin-left: 1rem;
+
+    &.fix-height {
+      height: 23rem;
+    }
   }
 
   @include bp-mobile() {
     min-width: 100%;
+    max-width: none;
     justify-content: start;
     margin: 0;
-    height: 20rem;
+
+    &.fix-height {
+      height: 20rem;
+    }
 
     &.mob-cover img {
       object-fit: cover;
-    }
-
-    img {
       width: 100%;
     }
   }
