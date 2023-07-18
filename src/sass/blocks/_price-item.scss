@@ -106,8 +106,24 @@
   display: flex;
   justify-content: space-between;
 
+  .price-item__img {
+    margin-top: 3.5rem;
+  }
+
+  &_tab .price-item__img {
+    margin-top: 9rem;
+  }
+
   @include bp-mobile() {
     flex-direction: column;
+
+    .price-item__img {
+      margin-top: 0;
+    }
+
+    &_tab .price-item__img {
+      margin-top: 0;
+    }
   }
 }
 
@@ -126,11 +142,12 @@
 
   @include bp-desktop() {
     min-width: 28rem;
+    height: 28rem;
   }
 
   @include bp-tablet() {
     min-width: 23rem;
-    height: 25rem;
+    height: 23rem;
     margin-left: 1rem;
   }
 
