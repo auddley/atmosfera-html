@@ -78,8 +78,6 @@
   }
 
   @include bp-tablet() {
-    max-width: none;
-
     h2 {
       margin-right: 1rem;
       margin-bottom: 3rem;
