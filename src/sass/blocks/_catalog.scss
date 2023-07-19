@@ -15,7 +15,7 @@
         background-size: contain;
         position: absolute;
         z-index: 0;
-        top: -45%;
+        top: -12rem;
         left: -12rem;
       }
     }
@@ -109,9 +109,14 @@
 
 .catalog__img-list {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
+  width: 100%;
   position: relative;
   z-index: 2;
+
+  @include bp-desktop() {
+    justify-content: space-between;
+  }
 
   @include bp-desktopXS() {
     overflow-x: scroll;
