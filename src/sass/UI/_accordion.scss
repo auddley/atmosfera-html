@@ -1,0 +1,13 @@
+.accordion {
+  &.active {
+    .accordion-body {
+      margin: 1.5rem 0 2.5rem;
+    }
+  }
+}
+
+.accordion-body {
+  height: 0;
+  transition: 0.4s;
+  overflow: hidden;
+}

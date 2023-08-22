@@ -165,4 +165,5 @@
 .price-list__btn-open {
   cursor: pointer;
   padding: 1.5rem 0;
+  border-bottom: 1px solid map-get($gray, color_d4);
 }

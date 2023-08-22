@@ -1,0 +1,15 @@
+input,
+textarea {
+  border: none;
+  border-radius: 0.6rem;
+  padding: 1.3rem 1rem;
+  color: map-get($basic, main);
+}
+/* stylelint-disable */
+input[type=file] {
+  padding: 0;
+}
+/* stylelint-enable */
+textarea {
+  resize: none;
+}

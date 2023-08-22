@@ -1,0 +1,46 @@
+{% set catalogItems = [
+    {
+        img: './assets/images/catalog-1.jpg',
+        title: 'Заполните бриф',
+        href: '#',
+    },
+    {
+        img: './assets/images/item.png',
+        title: 'Согласование',
+    },
+    {
+        img: './assets/images/catalog-1.jpg',
+        title: 'Внесение предоплаты',
+    },
+    {
+        img: './assets/images/catalog-1.jpg',
+        title: 'Внесение предоплаты',
+    },
+] %}
+
+<div class="catalog-grid__wrapper catalog-grid__wrapper_half">
+    <div class="catalog-grid__title">
+        <h2>Порядок работы</h2>
+    </div>
+
+    <div class="catalog-grid__list">
+        {% for el in catalogItems %}
+            <div class="catalog-grid__item catalog-grid__item_round">
+                <div class="catalog-grid__img">
+                    <img src="{{ el.img }}" alt="">
+                </div>
+
+                <h3 class="catalog-grid__label">{{ el.title }}</h3>
+
+                {% if el.href %}
+                    <a href="{{ el.href }}" class="advantages-list__item-link">
+                        <span>Открыть бриф</span>
+                        <svg width="18" height="13" viewBox="0 0 18 13" fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M11.9402 0.319448C11.7267 0.144343 11.4116 0.175489 11.2365 0.389014C11.0614 0.602539 11.0925 0.917586 11.3061 1.09269L16.0386 4.97373C16.3692 5.2448 16.5993 5.61269 16.7014 6.01917H0.739075C0.462932 6.01917 0.239075 6.24302 0.239075 6.51917C0.239075 6.79531 0.462932 7.01917 0.739075 7.01917H16.6915C16.5848 7.41048 16.3588 7.76389 16.0386 8.02646L11.3061 11.9075C11.0925 12.0826 11.0614 12.3976 11.2365 12.6112C11.4116 12.8247 11.7267 12.8558 11.9402 12.6807L16.6728 8.7997C17.3616 8.23482 17.7609 7.39091 17.7609 6.50009C17.7609 5.60927 17.3616 4.76536 16.6728 4.20048L11.9402 0.319448Z" fill="currentColor"></path>
+                        </svg>
+                    </a>
+                {% endif %}
+            </div>
+        {% endfor %}
+    </div>
+</div>

@@ -11,90 +11,18 @@
         time: '1-2 дней',
         href: '#',
     },
-    {
-        value: '288',
-        price: '4,8',
-        time: '1-2 дней',
-        href: '#',
-    },
-    {
-        value: '384',
-        price: '4,6',
-        time: '1-2 дней',
-        href: '#',
-    },
-    {
-        value: '96',
-        price: '6,0',
-        time: '1-2 дней',
-        href: '#',
-    },
-    {
-        value: '192',
-        price: '5,0',
-        time: '1-2 дней',
-        href: '#',
-    },
-    {
-        value: '288',
-        price: '4,8',
-        time: '1-2 дней',
-        href: '#',
-    },
-    {
-        value: '384',
-        price: '4,6',
-        time: '1-2 дней',
-        href: '#',
-    },
 ] %}
 
 {% set priceList2 = [
     {
-        value: '96',
+        value: '196',
         price: '10,0',
         time: '4-5 дней',
         href: '#',
     },
     {
-        value: '192',
+        value: '292',
         price: '15,0',
-        time: '4-5 дней',
-        href: '#',
-    },
-    {
-        value: '288',
-        price: '24,8',
-        time: '4-5 дней',
-        href: '#',
-    },
-    {
-        value: '384',
-        price: '54,6',
-        time: '4-5 дней',
-        href: '#',
-    },
-    {
-        value: '96',
-        price: '66,0',
-        time: '4-5 дней',
-        href: '#',
-    },
-    {
-        value: '192',
-        price: '85,0',
-        time: '4-5 дней',
-        href: '#',
-    },
-    {
-        value: '288',
-        price: '94,8',
-        time: '4-5 дней',
-        href: '#',
-    },
-    {
-        value: '384',
-        price: '94,6',
         time: '4-5 дней',
         href: '#',
     },
@@ -102,8 +30,8 @@
 
 <div class="price-item__wrapper js-tabs">
     <div class="price-item__title">
-        <h2>Стоимость печати бумажных этикеток</h2>
-        <h3>бумага мелованная 300 г, размер 9*5 см</h3>
+        <h2>Стоимость печати визиток</h2>
+        <h3>на бумаге MAJESTIC 300 г/м2</h3>
     </div>
 
     <div class="price-item__content price-item__content_tab">
@@ -114,7 +42,7 @@
                 <button class="tabs-btn">двухсторонний</button>
             </div>
 
-            <div class="js-price-list tabs-content active">
+            <div class="tabs-content active">
                 <div class="price-list__list">
                     <div class="price-list__item">
                         <div class="price-list__item-col">Тираж</div>
@@ -138,12 +66,10 @@
                         </div>
                     {% endfor %}
                 </div>
-
-                <div class="price-list__btn-open js-btn-price-list">Выбрать еще ▾</div>
             </div>
 
 
-            <div class="js-price-list tabs-content">
+            <div class="tabs-content">
                 <div class="price-list__list">
                     <div class="price-list__item">
                         <div class="price-list__item-col">Тираж</div>
@@ -167,16 +93,55 @@
                         </div>
                     {% endfor %}
                 </div>
-
-                <div class="price-list__btn-open js-btn-price-list">Выбрать еще ▾</div>
             </div>
 
             <div class="price-item__info">
-                * Ламинация 30 мкр матовая или глянцевая + 1 руб./шт
+                * Не рекомендовано делать заливку свыше 30%
             </div>
         </div>
         <div class="price-item__img fix-height mob-cover">
             <img src="./assets/images/catalog-1.jpg" alt="">
         </div>
+    </div>
+</div>
+
+{% set list = [
+    {
+        text: 'млечный путь'
+    },
+    {
+        text: 'розовые лепестки'
+    },
+    {
+        text: 'свежая мята'
+    },
+    {
+        text: 'небо Дамаска'
+    },
+    {
+        text: 'сияние золота'
+    },
+    {
+        text: 'настоящее серебро'
+    },
+    {
+        text: 'настоящее золото'
+    },
+] %}
+
+<div class="item-examples__wrapper">
+    <div class="item-examples__title">
+        <h2>Бумага<br>MAJESTIC</h2>
+        <p>Гладкие бумаги с двусторонним металлизированным покрытием</p>
+    </div>
+    <div class="item-examples__list">
+        {% for el in list %}
+            <div class="item-examples__item">
+                <div class="item-examples__img">
+                    <img src="./assets/images/item-1.jpg" alt="">
+                </div>
+                <p>{{ el.text }}</p>
+            </div>
+        {% endfor %}
     </div>
 </div>

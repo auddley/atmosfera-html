@@ -19,6 +19,20 @@ h3 {
   font-size: 2.2rem;
   font-weight: 700;
 
+  span {
+    &.pink {
+      color: map-get($basic, hover-main);
+    }
+
+    &.regular {
+      font-weight: normal;
+    }
+
+    &.small {
+      font-size: 1.3rem;
+    }
+  }
+
   @include bp-tablet() {
     font-size: 1.7rem;
   }

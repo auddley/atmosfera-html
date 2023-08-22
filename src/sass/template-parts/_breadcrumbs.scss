@@ -7,13 +7,21 @@
   border-bottom: 1px solid map-get($gray, color_d4);
 
   @include bp-tablet() {
-    padding: 0;
-    border-bottom: none;
     margin-bottom: 2rem;
   }
 
   @include bp-tabletXS() {
-    display: none;
+    padding: 0;
+    border-bottom: none;
+  }
+}
+
+.breadcrumbs {
+  @include bp-tabletXS() {
+    padding: 0 0 1rem;
+    border-bottom: 1px solid map-get($gray, color_d4);
+    width: 100%;
+    font-size: 1.1rem;
   }
 }
 
@@ -45,6 +53,7 @@
   text-decoration: none;
   color: map-get($basic, main);
   transition: 0.3s;
+  white-space: nowrap;
 
   &:hover {
     color: map-get($basic, hover-primary);
@@ -55,6 +64,10 @@
   display: flex;
   align-items: center;
   max-width: 41rem;
+
+  @include bp-tabletXS() {
+    display: none;
+  }
 }
 
 .breadcrumbs__subtitle-text {

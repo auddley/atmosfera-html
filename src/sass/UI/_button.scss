@@ -39,6 +39,23 @@
       }
     }
   }
+
+  &_blue {
+    background: map-get($basic, hover-primary);
+    color: $color-white;
+
+    @include bp-tablet(min) {
+      &:hover {
+        background: map-get($gray, color_f0);
+        color: map-get($basic, main);
+      }
+    }
+  }
+
+  &.text-first svg {
+    order: 2;
+    margin: 0 0 0 1rem;
+  }
 }
 
 .btn {

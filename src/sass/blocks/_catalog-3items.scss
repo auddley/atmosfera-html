@@ -24,27 +24,40 @@
   margin-right: 2rem;
 
   @include bp-tablet() {
-    max-width: 23rem;
-    min-width: 23rem;
+    max-width: 40rem;
+    min-width: 40rem;
+  }
+
+  @include bp-mobile() {
+    max-width: 100%;
+    min-width: auto;
   }
 }
 
 .catalog-items__list {
   display: flex;
+  justify-content: flex-end;
+
+  @include bp-tablet() {
+    justify-content: space-between;
+  }
 
   @include bp-mobile() {
     flex-wrap: wrap;
-    justify-content: space-between;
   }
 }
 
 .catalog-items__item {
-  width: 33%;
+  width: 32%;
   display: flex;
   flex-direction: column;
 
   + .catalog-items__item {
     margin-left: 1rem;
+  }
+
+  p {
+    margin: 0 0 2rem;
   }
 
   @include bp-mobile() {
@@ -74,12 +87,40 @@
     object-fit: cover;
   }
 
+  &_height {
+    height: 30rem;
+  }
+
+  &_square {
+    height: 33rem;
+  }
+
   @include bp-desktopXS() {
     height: 16rem;
+
+    &_height {
+      height: 27rem;
+    }
+  }
+
+  @include bp-tablet() {
+    &_height {
+      height: 22rem;
+    }
+  }
+
+  @include bp-tabletXS() {
+    &_height {
+      height: 20rem;
+    }
   }
 
   @include bp-mobile() {
     margin-bottom: 1rem;
+
+    &_height {
+      height: 16rem;
+    }
   }
 }
 
@@ -109,20 +150,44 @@
 
 .catalog-items__price {
   color: map-get($basic, hover-main);
-  margin-bottom: 4rem;
+
+  + .catalog-items__price {
+    margin-top: 0.5rem;
+  }
+
+  &:last-of-type {
+    margin-bottom: 3rem;
+  }
 
   span {
     font-family: $font1;
     font-size: 2.2rem;
     font-weight: 700;
+
+    &.min {
+      font-size: 1.3rem;
+      color: map-get($basic, main);
+      font-weight: normal;
+      margin-right: 1.5rem;
+    }
   }
 
   @include bp-desktopXS() {
-    margin-bottom: 3rem;
+    &:last-of-type {
+      margin-bottom: 3rem;
+    }
   }
 
   @include bp-tablet() {
     margin-top: auto;
+
+    span {
+      font-size: 1.8rem;
+
+      &.min {
+        margin-right: 1rem;
+      }
+    }
   }
 }
 
