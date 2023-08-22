@@ -8,11 +8,21 @@
   @include bp-desktopXS() {
     .catalog-items__img {
       height: 18rem;
+
+      &_square {
+        height: 28rem;
+      }
     }
   }
 
   @include bp-tablet() {
     margin-bottom: 7rem;
+
+    .catalog-items__img {
+      &_square {
+        height: 22rem;
+      }
+    }
   }
 
   @include bp-tabletXS() {
@@ -46,6 +56,12 @@
 
   @include bp-mobile() {
     margin-bottom: 3rem;
+
+    .catalog-items__img {
+      &_square {
+        height: 15rem;
+      }
+    }
   }
 }
 

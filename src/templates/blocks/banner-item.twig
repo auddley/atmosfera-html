@@ -1,0 +1,82 @@
+{% set infoBreadcrumbs = {
+    text: 'Минимальный заказ 800 рублей. <br>Стоимость продукции уточняйте у менеджера',
+} %}
+
+{% set breadcrumbs = [
+    {
+        href: '/',
+        name: 'Главная',
+    },
+    {
+        href: '#',
+        name: 'Услуги',
+    },
+    {
+        href: '#',
+        name: 'Сувенирная продукция',
+    },
+    {
+        href: '#',
+        name: 'Магниты',
+    },
+] %}
+
+{% include '../template-parts/breadcrumbs.twig' with {
+    breadcrumbs: breadcrumbs,
+    infoBreadcrumbs: infoBreadcrumbs
+} %}
+
+<div class="banner-item__wrapper">
+    <div class="banner-item__info">
+        <div class="banner-item__text">
+            <h2>ПЕЧАТЬ БЕЙДЖЕЙ<br>
+                в Новосибирске</h2>
+            <p>пластиковых, с гравировкой, с УФ печатью на профессиональном оборудовании</p>
+            <div class="banner-item__btn-banner">от 6,8 руб за штуку</div>
+        </div>
+
+        <div class="banner-item__controllers">
+            {% include '../UI/button.twig' with {
+                href: '#',
+                colorClass: 'primary',
+                class: 'text-first',
+                text: 'Получить<br>консультацию',
+                svg: '<svg width="31" height="23" viewBox="0 0 31 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M20.2282 0.241286C19.8092 -0.118474 19.1778 -0.0704212 18.8181 0.348615C18.4583 0.767651 18.5064 1.39899 18.9254 1.75875L26.9608 8.65746C27.4966 9.11747 27.8773 9.72128 28.0655 10.3872L1 10.3872C0.447715 10.3872 0 10.8349 0 11.3872C0 11.9395 0.447715 12.3872 1 12.3872L28.0455 12.3872C27.8511 13.0262 27.4783 13.6046 26.9608 14.0488L18.9254 20.9475C18.5064 21.3073 18.4583 21.9386 18.8181 22.3577C19.1778 22.7767 19.8092 22.8248 20.2282 22.465L28.2636 15.5663C29.4923 14.5114 30.1993 12.9726 30.1993 11.3531C30.1993 9.73368 29.4923 8.19492 28.2636 7.13999L20.2282 0.241286Z" fill="currentColor"/>
+                    </svg>',
+            } %}
+
+            {% include '../UI/button.twig' with {
+                href: '#',
+                colorClass: 'blue',
+                class: 'text-first',
+                text: 'Смотреть<br>цены',
+                svg: '<svg width="31" height="23" viewBox="0 0 31 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M20.2282 0.241286C19.8092 -0.118474 19.1778 -0.0704212 18.8181 0.348615C18.4583 0.767651 18.5064 1.39899 18.9254 1.75875L26.9608 8.65746C27.4966 9.11747 27.8773 9.72128 28.0655 10.3872L1 10.3872C0.447715 10.3872 0 10.8349 0 11.3872C0 11.9395 0.447715 12.3872 1 12.3872L28.0455 12.3872C27.8511 13.0262 27.4783 13.6046 26.9608 14.0488L18.9254 20.9475C18.5064 21.3073 18.4583 21.9386 18.8181 22.3577C19.1778 22.7767 19.8092 22.8248 20.2282 22.465L28.2636 15.5663C29.4923 14.5114 30.1993 12.9726 30.1993 11.3531C30.1993 9.73368 29.4923 8.19492 28.2636 7.13999L20.2282 0.241286Z" fill="currentColor"/>
+                    </svg>',
+            } %}
+        </div>
+    </div>
+
+    <div class="banner-item__img-wrapper">
+        <div class="banner-item__img">
+            <img src="./assets/images/banner.png" alt="">
+            <div class="banner-item__img-arrow">
+                <svg width="46" height="44" viewBox="0 0 46 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M45.3382 1.43995C45.3382 0.887667 44.8905 0.439951 44.3382 0.439951C43.786 0.439949 43.3382 0.887665 43.3382 1.43995L43.3382 28.3344C43.3382 31.456 42.208 34.461 40.1741 36.8024L6.54926 3.17745C6.15874 2.78693 5.52557 2.78693 5.13505 3.17745C4.74452 3.56798 4.74452 4.20114 5.13505 4.59167L38.7496 38.2063C36.4295 40.1629 33.4831 41.2478 30.4248 41.2478L1.34787 41.2477C0.79558 41.2477 0.347865 41.6954 0.347864 42.2477C0.347861 42.8 0.795576 43.2477 1.34786 43.2477L30.4248 43.2478C34.3801 43.2478 38.1734 41.6765 40.9702 38.8797C43.767 36.083 45.3382 32.2897 45.3382 28.3344L45.3382 1.43995Z" fill="#34495E"/>
+                </svg>
+            </div>
+        </div>
+
+        <div class="banner-item__slider js-single-banner">
+            <div class="js-slider-banner">
+                <div class="swiper-wrapper">
+                    <a href="#" class="swiper-slide"><img src="./assets/images/banner-1.jpg" alt=""></a>
+                    <a href="#" class="swiper-slide"><img src="./assets/images/banner-2.jpg" alt=""></a>
+                    <a href="#" class="swiper-slide"><img src="./assets/images/banner-3.jpg" alt=""></a>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+</div>

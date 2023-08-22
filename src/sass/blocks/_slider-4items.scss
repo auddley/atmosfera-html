@@ -69,6 +69,10 @@
   @include bp-tablet() {
     min-height: 22rem;
   }
+
+  @include bp-mobile() {
+    min-height: 17rem;
+  }
 }
 
 .slider-title {

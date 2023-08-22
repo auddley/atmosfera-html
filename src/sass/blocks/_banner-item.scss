@@ -1,0 +1,283 @@
+.banner-item__wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10rem;
+
+  @include bp-tablet() {
+    margin-bottom: 7rem;
+  }
+
+  @include bp-tabletXS() {
+    margin-bottom: 4rem;
+    align-items: flex-end;
+    padding-top: 14rem;
+    position: relative;
+  }
+
+  @include bp-mobile() {
+    margin-bottom: 3rem;
+    padding-top: 10rem;
+  }
+}
+
+.banner-item__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-right: 1.2rem;
+
+  @include bp-tabletXS() {
+    order: 2;
+    margin: 0 0 0 1.2rem;
+    height: 24rem;
+  }
+
+  @include bp-mobile() {
+    margin: 0;
+    width: 100%;
+    align-items: flex-end;
+    height: auto;
+  }
+}
+
+.banner-item__text {
+  display: flex;
+  flex-direction: column;
+
+  h2 {
+    margin-bottom: 1.5rem;
+    font-size: 5.8rem;
+  }
+
+  p {
+    font-size: 2.2rem;
+    font-family: $font1;
+    margin: 0 0 3rem;
+  }
+
+  @include bp-tablet() {
+    h2 {
+      font-size: 4.6rem;
+      margin-bottom: 2.5rem;
+    }
+
+    p {
+      margin-bottom: 5rem;
+    }
+  }
+
+  @include bp-tabletXS() {
+    h2 {
+      position: absolute;
+      font-size: 4.2rem;
+      top: 0;
+      left: 0;
+    }
+
+    p {
+      font-size: 1.4rem;
+      margin-bottom: 2.5rem;
+    }
+  }
+
+  @include bp-mobile() {
+    width: 50%;
+    height: 16rem;
+    justify-content: space-between;
+
+    h2 {
+      font-size: 3.2rem;
+    }
+  }
+}
+
+.banner-item__btn-banner {
+  color: $color-black;
+  background: map-get($gray, color_f0);
+  border-radius: 0.6rem;
+  padding: 1rem 1.7rem;
+  font-family: $font1;
+  font-weight: 700;
+  display: flex;
+  width: 19.5rem;
+  font-size: 1.7rem;
+
+  @include bp-mobile() {
+    font-size: 1.3rem;
+    width: 15.5rem;
+  }
+}
+
+.banner-item__controllers {
+  display: flex;
+
+  a {
+    min-width: 17.5rem;
+
+    + a {
+      margin-left: 1.2rem;
+    }
+  }
+
+  @include bp-tabletXS() {
+    a {
+      min-width: auto;
+    }
+  }
+
+  @include bp-mobile() {
+    width: 100%;
+    flex-direction: column;
+    margin-top: 2.5rem;
+
+    a + a {
+      margin: 1.2rem 0 0 0;
+    }
+  }
+}
+
+.banner-item__img-wrapper {
+  display: flex;
+  width: 50%;
+
+  @include bp-desktopXS() {
+    justify-content: flex-end;
+  }
+
+  @include bp-tabletXS() {
+    width: 25rem;
+  }
+
+  @include bp-mobile() {
+    position: absolute;
+    justify-content: flex-start;
+    width: calc(50% - 1.2rem);
+    height: 16rem;
+    top: 10rem;
+  }
+}
+
+.banner-item__img {
+  width: calc(50% - 0.6rem);
+  height: 43rem;
+  border-radius: 0.6rem;
+  overflow: hidden;
+  margin-right: 1.2rem;
+  position: relative;
+  background: map-get($gray, color_f0);
+  padding: 4rem 2rem;
+
+  img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+  }
+
+  @include bp-desktopXS() {
+    width: 32rem;
+    margin-right: 0;
+  }
+
+  @include bp-tabletXS() {
+    width: 24rem;
+    height: 24rem;
+    padding: 2rem 2.5rem;
+  }
+
+  @include bp-mobile() {
+    width: 100%;
+    height: 16rem;
+    padding: 1.8rem 2.5rem;
+  }
+}
+
+.banner-item__img-arrow {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+
+  @include bp-mobile() {
+    width: 2.5rem;
+    height: 2.5rem;
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.banner-item__slider {
+  width: calc(50% - 0.6rem);
+  height: 43rem;
+  border-radius: 0.6rem;
+
+  .js-slider-banner {
+    height: 43rem;
+    overflow: hidden;
+  }
+
+  .swiper-wrapper {
+    display: flex;
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    min-width: 100%;
+    height: 43rem;
+    display: block;
+    transition: 0.3s;
+
+    &:hover {
+      opacity: 0.5;
+    }
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 0.6rem;
+    }
+  }
+
+  .swiper-pagination {
+    height: 1rem;
+    display: flex;
+    justify-content: center;
+    width: auto;
+    z-index: 10;
+    margin-top: 2rem;
+
+    .swiper-pagination-bullet {
+      transition: 0.3s;
+      display: block;
+      width: 0.7rem;
+      height: 0.7rem;
+      background: map-get($gray, color_e8);
+      border-radius: 50%;
+      cursor: pointer;
+
+      &:hover {
+        background: $color-gray;
+      }
+
+      + .swiper-pagination-bullet {
+        margin-left: 1.5rem;
+      }
+
+      &-active {
+        background: map-get($basic, primary);
+        cursor: default;
+
+        &:hover {
+          background: map-get($basic, primary);
+        }
+      }
+    }
+  }
+
+  @include bp-desktopXS() {
+    display: none;
+  }
+}

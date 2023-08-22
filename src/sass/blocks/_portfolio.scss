@@ -51,6 +51,22 @@
   display: flex;
   justify-content: space-between;
 
+  &_margin {
+    margin-bottom: 10rem;
+
+    @include bp-tablet() {
+      margin-bottom: 7rem;
+    }
+
+    @include bp-tabletXS() {
+      margin-bottom: 4rem;
+    }
+
+    @include bp-mobile() {
+      margin-bottom: 3rem;
+    }
+  }
+
   @include bp-tablet() {
     flex-direction: column;
   }
@@ -82,5 +98,64 @@
 
   @include bp-tablet() {
     width: 100%;
+  }
+}
+
+.portfolio__links {
+  display: flex;
+  flex-direction: column;
+  margin-top: 4rem;
+}
+
+.portfolio-links__title {
+  font-size: 2.2rem;
+  color: $color-black;
+  font-family: $font1;
+  margin-bottom: 3.5rem;
+}
+
+.portfolio-links__list {
+  display: flex;
+  flex-direction: column;
+}
+
+.portfolio-links__item {
+  display: flex;
+  align-items: center;
+  color: map-get($basic, main);
+  text-decoration: none;
+  padding: 1.5rem 0;
+  border-top: 1px solid map-get($gray, color_d4);
+  transition: 0.3s;
+
+  &:last-of-type {
+    border-bottom: 1px solid map-get($gray, color_d4);
+  }
+
+  span {
+    margin-right: 1rem;
+  }
+
+  svg {
+    &:first-of-type {
+      margin-right: 2rem;
+      min-width: 2.2rem;
+    }
+
+    &:last-of-type {
+      margin-left: auto;
+      transition: 0.3s;
+      min-width: 2.5rem;
+    }
+  }
+
+  &:hover {
+    color: map-get($basic, hover-primary);
+
+    svg {
+      &:last-of-type {
+        margin-right: 1rem;
+      }
+    }
   }
 }

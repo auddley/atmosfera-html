@@ -1,10 +1,11 @@
 ;(function () {
     function sliderBannerInit() {
-        const swiperBanner = document.querySelector('.banner__wrapper')
+        const swiperBanner = document.querySelector('.banner__wrapper');
+        const swiperBannerSingle = document.querySelector('.js-single-banner');
 
-        if (swiperBanner) {
-            const container = swiperBanner.querySelector('.js-slider-banner')
-            const pagination = swiperBanner.querySelector('.swiper-pagination')
+        if (swiperBanner || swiperBannerSingle) {
+            const container = swiperBanner ? swiperBanner.querySelector('.js-slider-banner') : swiperBannerSingle.querySelector('.js-slider-banner');
+            const pagination = swiperBanner ? swiperBanner.querySelector('.swiper-pagination') : swiperBannerSingle.querySelector('.swiper-pagination');
 
             const settingsSlider = {
                 direction: 'horizontal',
