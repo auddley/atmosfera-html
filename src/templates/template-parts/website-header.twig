@@ -116,13 +116,93 @@
 
             <div class="header-menu">
                 <div class="header-menu__navigation">
-                    <button class="navigation__hidden-menu">
+                    <button class="navigation__hidden-menu accordion js-menu-accordion">
                         <svg width="26" height="16" viewBox="0 0 26 16" fill="none">
                             <path d="M1 1H25" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                             <path d="M1 8H25" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                             <path d="M1 15H25" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                         </svg>
-                        Продукция
+                        <span class="accordion-btn js-accordion-btn">
+                            Продукция
+                        </span>
+
+                        <ul class="main-menu js-accordion-body">
+                            <li class="main-menu__dropdown-item accordion js-menu-accordion">
+                                <a class="has-dropdown accordion-btn js-accordion-btn" href="#">Цифровая офсетная печать</a>
+                                <ul class="main-menu__dropdown-list js-accordion-body">
+
+                                    <li class="main-menu__dropdown-item__second accordion js-menu-accordion">
+                                        <a class="has-dropdown accordion-btn js-accordion-btn" href="#">Визитки</a>
+                                        <ul class="main-menu__dropdown-list__second js-accordion-body">
+                                            <li><a href="#">Визитки на дизайнерской бумаге</a></li>
+                                            <li><a href="#">Визитки прозрчные и полупрозрачные</a></li>
+                                            <li><a href="#">Визитки тиснение</a></li>
+                                            <li><a href="#">Визитки УФ-печать</a></li>
+                                            <li><a href="#">Визитки шелкография</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="main-menu__dropdown-item__second accordion js-menu-accordion">
+                                        <a class="has-dropdown accordion-btn js-accordion-btn" href="#">Календари</a>
+                                        <ul class="main-menu__dropdown-list__second js-accordion-body">
+                                            <li><a href="#">Визитки на дизайнерской бумаге</a></li>
+                                            <li><a href="#">Визитки прозрчные и полупрозрачные</a></li>
+                                            <li><a href="#">Визитки тиснение</a></li>
+                                            <li><a href="#">Визитки УФ-печать</a></li>
+                                            <li><a href="#">Визитки шелкография</a></li>
+                                            <li><a href="#">Визитки прозрчные и полупрозрачные</a></li>
+                                            <li><a href="#">Визитки тиснение</a></li>
+                                            <li><a href="#">Визитки УФ-печать</a></li>
+                                            <li><a href="#">Визитки шелкография</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="main-menu__dropdown-item__second accordion js-menu-accordion">
+                                        <a class="has-dropdown accordion-btn js-accordion-btn" href="#">Конверты</a>
+                                        <ul class="main-menu__dropdown-list__second js-accordion-body">
+                                            <li><a href="#">3D наклейки</a></li>
+                                            <li><a href="#">Бейдж</a></li>
+                                            <li><a href="#">Билеты</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li><a class="has-dropdown" href="#">Свадебная полиграфия</a></li>
+                                    <li><a href="#">3D наклейки</a></li>
+                                    <li><a href="#">Бейдж</a></li>
+                                    <li><a href="#">Билеты</a></li>
+                                    <li><a href="#">Блокнтоты</a></li>
+                                    <li><a href="#">Брошюра, каталог</a></li>
+                                    <li><a href="#">Буклеты</a></li>
+                                    <li><a href="#">Визитки</a></li>
+                                    <li><a href="#">Календари</a></li>
+                                    <li><a href="#">Конверты</a></li>
+                                    <li><a href="#">Свадебная полиграфия</a></li>
+                                    <li><a href="#">3D наклейки</a></li>
+                                    <li><a href="#">Бейдж</a></li>
+                                    <li><a href="#">Билеты</a></li>
+                                    <li><a href="#">Блокнтоты</a></li>
+                                    <li><a href="#">Брошюра, каталог</a></li>
+                                    <li><a href="#">Буклеты</a></li>
+                                    <li><a href="#">Подложка на стол, плейсменты</a></li>
+                                    <li><a href="#">Ризограф (документы, бланки)</a></li>
+                                    <li><a href="#">Стикерпаки и стикербуки</a></li>
+                                    <li><a href="#">Пакеты</a></li>
+                                    <li><a href="#">Плакат, афиша</a></li>
+                                    <li><a href="#">Пластиковые карты</a></li>
+                                    <li><a href="#">Тату переводные</a></li>
+                                    <li><a href="#">Этикетка</a></li>
+                                    <li><a href="#">Полиграфия</a></li>
+                                    <li><a href="#">Открытки, пригласительные</a></li>
+                                    <li><a href="#">Самокопир</a></li>
+                                    <li><a href="#">Меню</a></li>
+                                </ul>
+                            </li>
+                            <li><a class="has-dropdown" href="#">Пост материалы и оборудование</a></li>
+                            <li><a class="has-dropdown" href="#">Наружная реклама</a></li>
+                            <li><a class="has-dropdown" href="#">Сувенирная продукция</a></li>
+                            <li><a class="has-dropdown" href="#">Текстиль</a></li>
+                            <li><a class="has-dropdown" href="#">Услуги дизайнера</a></li>
+                        </ul>
                     </button>
 
                     <ul class="navigation-list">
@@ -131,7 +211,19 @@
                         <li><a href="#">Доставка</a></li>
                         <li><a href="#">Конструктор</a></li>
                         <li><a href="#">Портфолио</a></li>
-                        <li class="navigation-list_dropdown-item"><a href="#">Для клиентов</a></li>
+                        <li class="navigation-list_dropdown-item accordion js-menu-accordion">
+                            <a href="#" class="accordion-btn js-accordion-btn">Для клиентов</a>
+                            <ul class="navigation-list_dropdown-list js-accordion-body">
+                                <li><a href="#">Каталог дизайнерских бумаг</a></li>
+                                <li><a href="#">Каталог форм для вырубки</a></li>
+                                <li><a href="#">Каталог шаблонов для верстки</a></li>
+                                <li><a href="#">Технические рекомендации</a></li>
+                                <li><a href="#">CMYK RGB</a></li>
+                                <li><a href="#">Цветопроба</a></li>
+                                <li><a href="#">PANTONE</a></li>
+                                <li><a href="#">Инструкции</a></li>
+                            </ul>
+                        </li>
                         <li><a href="#">Контакты</a></li>
                     </ul>
 
