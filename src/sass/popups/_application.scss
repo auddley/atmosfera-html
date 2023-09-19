@@ -1,0 +1,85 @@
+
+.application-popup {
+  h2 {
+    line-height: 3.7rem;
+    font-size: 3.7rem;
+    font-weight: 700;
+    color: map-get($basic, main);
+    margin-bottom: 2rem;
+
+    @media (max-width: 790px) {
+      font-size: 2.6rem;
+    }
+  }
+
+  p {
+    font-size: 1.4rem;
+    color: map-get($basic, main);
+  }
+
+  .application__body {
+    form {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 3.5rem;
+
+      > * + * {
+        margin-top: 1rem;
+      }
+
+      p {
+        margin: 2rem 0 0;
+        font-size: 1rem;
+
+        input {
+          margin-right: 0.5rem;
+        }
+
+        a {
+          color: map-get($basic, hover-main);
+
+          &:hover {
+            color: map-get($basic, hover-primary);
+          }
+        }
+      }
+
+      .button-primary {
+        text-align: left;
+
+        &:hover {
+          background: map-get($basic, hover-primary);
+          color: $color-white;
+        }
+      }
+    }
+  }
+}
+
+.wrapper-checkbox {
+  margin: 0 0 3.5rem;
+
+  h3 {
+    font-size: 1.7rem;
+    color: map-get($basic, main);
+    margin: 2rem 0 0;
+  }
+}
+
+.wrapper-checkbox__list {
+  display: flex;
+  margin-top: 2rem;
+}
+
+.wrapper-checkbox__item {
+  display: flex;
+  align-items: center;
+
+  label {
+    margin-left: 0.8rem;
+  }
+
+  + .wrapper-checkbox__item {
+    margin-left: 1.5rem;
+  }
+}

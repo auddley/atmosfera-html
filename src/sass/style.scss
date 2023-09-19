@@ -27,7 +27,8 @@
 // ------------------------------------------ //
 // popups
 // ------------------------------------------ //
-/*@import "popups/header";*/
+@import "popups/application";
+@import "popups/search";
 
 // ------------------------------------------ //
 // BLOCKS
@@ -61,3 +62,4 @@
 @import "blocks/banner-item";
 @import "blocks/price-item__row";
 @import "blocks/label-images";
+@import "blocks/page-search";

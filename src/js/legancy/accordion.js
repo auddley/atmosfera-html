@@ -6,7 +6,9 @@
             accordion.forEach(el => {
                 const btn = el.querySelector('.js-accordion-btn');
                 const body = el.querySelector('.js-accordion-body');
+
                 const height = body.scrollHeight;
+
 
                 if (el.classList.contains('active')) {
                     body.style.height = height + 'px';
