@@ -2,16 +2,20 @@
   justify-content: flex-end;
   background: transparent;
 
+  /* stylelint-disable */
+
   .popup__wrap {
     margin: 0;
     min-width: 72rem;
-    top: 21rem;
-    right: 2rem;
+    top: 22rem;
+    right: calc((100vw - 1400px)/2 + 2rem);
     position: absolute;
     box-shadow: 0 4px 20px 0 #52596666;
     border-radius: 0.6rem;
     overflow: hidden;
   }
+
+  /* stylelint-enable */
 
   .popup__close {
     display: none;
@@ -19,6 +23,12 @@
 
   .popup__content-wrap {
     margin: 0;
+  }
+
+  @include bp-desktopHD() {
+    .popup__wrap {
+      right: 2rem;
+    }
   }
 
   @include bp-desktop() {
