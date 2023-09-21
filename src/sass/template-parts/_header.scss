@@ -273,10 +273,13 @@
     width: 100%;
     margin-left: -2rem;
     background: map-get($gray, color_f0);
-    height: 100vh;
+    //height: 100vh;
+    height: auto;
   }
 
   &.active {
+    overflow-y: scroll;
+
     @include bp-desktopXS() {
       transform: translateX(0);
     }
@@ -294,12 +297,13 @@
     flex-direction: column;
     width: 100%;
     overflow-y: auto;
-    height: 100%;
+    height: calc(100vh - 14rem);
 
     .btn-yellow {
       background: transparent;
       color: map-get($basic, main);
       font-family: $font2;
+      padding: 2rem 1rem;
 
       svg {
         display: none;
@@ -309,6 +313,10 @@
     li {
       border-bottom: 1px solid map-get($gray, color_e8) !important;
     }
+  }
+
+  @include bp-tablet() {
+    height: calc(100vh - 10.5rem);
   }
 }
 
@@ -351,8 +359,12 @@
       display: flex;
     }
 
-    li + li {
-      margin: 0;
+    li {
+      padding: 2rem 1rem;
+
+      + li {
+        margin: 0;
+      }
     }
   }
 }
@@ -397,7 +409,7 @@
     justify-content: left;
     display: flex;
     flex-direction: column;
-    padding: 1rem;
+    padding: 2rem 1rem;
     border-bottom: 1px solid map-get($gray, color_e8);
     border-radius: 0;
 
@@ -414,7 +426,7 @@
       border-bottom: 1px solid currentColor;
       border-right: 1px solid currentColor;
       position: absolute;
-      top: 1.5rem;
+      top: 2.5rem;
       right: 1.3rem;
       transform: rotate(-45deg);
       transition: 0.3s;
@@ -456,7 +468,7 @@
 
     > li > a {
       width: 100%;
-      padding: 1rem 0;
+      padding: 2rem 0;
     }
   }
 
@@ -535,7 +547,7 @@
 
     a {
       white-space: normal;
-      height: 3.6rem;
+      height: 5.6rem;
       padding: 0 1rem;
       display: flex;
       align-items: center;
@@ -719,7 +731,7 @@
     width: 100%;
 
     li {
-      padding: 1rem 0;
+      padding: 2rem 0;
     }
   }
 }
@@ -859,6 +871,49 @@
         bottom: 0;
         height: 0.15rem;
       }
+    }
+  }
+}
+
+.contacts__wrap {
+  @include bp-desktopXS(min) {
+    display: none;
+  }
+
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+
+  h3 {
+    margin: 2rem 0;
+    font-size: 1.4rem;
+  }
+}
+
+.contacts__list {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 3rem;
+}
+
+.contacts__item {
+  text-decoration: none;
+  color: map-get($basic, main);
+  display: flex;
+
+  + .contacts__item {
+    margin-top: 2rem;
+  }
+
+  span {
+    &:first-of-type {
+      display: inline-block;
+      width: 3rem;
+    }
+
+    b {
+      display: inline-block;
+      margin-bottom: 0.7rem;
     }
   }
 }
