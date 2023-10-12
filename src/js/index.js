@@ -76,6 +76,7 @@ window.isDev = window.location.hostname === 'localhost' || window.location.hostn
         close: true,
         onAfterOpen(popup) {
             window.masks.phone();
+            window.fileForm.init();
         },
         onAfterClose(popup) {
         }
