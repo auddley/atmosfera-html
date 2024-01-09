@@ -19,8 +19,8 @@
 }
 
 .catalog-3items__label {
-  max-width: 29rem;
-  min-width: 29rem;
+  max-width: calc(25% - 2rem);
+  min-width: calc(25% - 2rem);
   margin-right: 2rem;
 
   @include bp-tablet() {
@@ -48,7 +48,7 @@
 }
 
 .catalog-items__item {
-  width: 32%;
+  width: 33%;
   display: flex;
   flex-direction: column;
 
@@ -58,6 +58,10 @@
 
   p {
     margin: 0 0 2rem;
+
+    &:empty {
+      margin: 0;
+    }
   }
 
   @include bp-mobile() {
@@ -202,6 +206,7 @@
   padding: 0.7rem 1rem;
   width: 17rem;
   transition: 0.3s;
+  margin-top: auto;
 
   &:hover {
     background: map-get($basic, hover-main);

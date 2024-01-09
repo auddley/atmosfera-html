@@ -21,6 +21,10 @@
     background: map-get($basic, hover-main);
     color: $color-white;
   }
+
+  @include bp-tabletXS() {
+    white-space: nowrap;
+  }
 }
 
 .tabs-content {

@@ -55,9 +55,9 @@
 .catalog__title {
   display: flex;
   flex-direction: column;
-  min-width: 31rem;
-  max-width: 31rem;
-  margin-right: 1rem;
+  min-width: calc(25% - 0.5rem);
+  max-width: calc(25% - 0.5rem);
+  margin-right: 3rem;
   position: relative;
   z-index: 2;
 
@@ -152,6 +152,7 @@
     width: 14rem;
     height: 14rem;
     border-radius: 0.6rem;
+    background: #f0f5f5;
 
     img {
       width: 100%;
@@ -204,8 +205,8 @@
 }
 
 .catalog__subtitle {
-  min-width: 31rem;
-  margin-right: 1rem;
+  min-width: calc(25% - 0.5rem);
+  margin-right: 3rem;
   font-size: 1.7rem;
   font-weight: bold;
   padding-top: 2rem;
