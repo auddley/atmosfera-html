@@ -108,7 +108,8 @@ window.isDev = window.location.hostname === 'localhost' || window.location.hostn
         switch (el.dataset.popup) {
             case 'application':
                 el.addEventListener('click', () => {
-                    window.popups.application.open()
+                    let title = el.getAttribute('data-title');
+                    window.popups.application.open(title)
                 });
                 break;
             case 'search':

@@ -133,7 +133,13 @@
      * @type {{close(): void, open(): void}}
      */
     let methods = {
-      open() {
+      open(title) {
+
+        if (title) {
+          const inputTitle = wrap.querySelector('.js-title-form');
+          inputTitle.value = title
+        }
+
         !closing && wrap.classList.add('popup_open')
         setPadding(getScrollBarWidth() + 'px')
         document.addEventListener('keydown', escClickHandler)
