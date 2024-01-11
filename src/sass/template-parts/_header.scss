@@ -55,7 +55,6 @@
 
 .header__controllers {
   display: flex;
-  margin: 0.7rem 0;
 
   a {
     text-decoration: none;
@@ -64,6 +63,7 @@
     transition: 0.3s;
     display: flex;
     align-items: center;
+    padding: 0.7rem 0;
 
     span {
       display: inline-block;
@@ -106,6 +106,44 @@
 
   @include bp-tablet() {
     width: 100%;
+  }
+}
+
+.header__city {
+  position: relative;
+  cursor: pointer;
+  z-index: 110;
+
+  &:hover .list-city {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.list-city {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  top: 2.6rem;
+  background: white;
+  width: 15rem;
+  border-radius: 0.5rem;
+  padding: 0.5rem 0;
+  color: map-get($basic, main);
+  box-shadow: 0 4px 20px 0 #52596666;
+
+  li {
+    list-style-type: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+
+    + li {
+      border-top: 1px solid map-get($gray, color_e8);
+    }
+
+    &:hover {
+      color: map-get($basic, hover-primary);
+    }
   }
 }
 
