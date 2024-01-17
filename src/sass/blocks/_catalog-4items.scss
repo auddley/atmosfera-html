@@ -68,11 +68,3 @@
 .catalog-items__subtitle {
   margin: 0 0 2rem;
 }
-
-.catalog-4items__title {
-  max-width: 43rem;
-
-  @include bp-desktopXS() {
-    max-width: 38rem;
-  }
-}

@@ -10,13 +10,11 @@
   @include bp-tabletXS() {
     margin-bottom: 4rem;
     align-items: flex-end;
-    padding-top: 14rem;
     position: relative;
   }
 
   @include bp-mobile() {
     margin-bottom: 3rem;
-    padding-top: 10rem;
   }
 }
 
@@ -26,10 +24,22 @@
   justify-content: space-between;
   margin-right: 1.2rem;
 
+  .banner-item__img {
+    display: none;
+  }
+
   @include bp-tabletXS() {
-    order: 2;
-    margin: 0 0 0 1.2rem;
-    height: 24rem;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    .banner-item__img {
+      display: flex;
+    }
+
+    h2 {
+      width: 100%;
+    }
   }
 
   @include bp-mobile() {
@@ -43,6 +53,7 @@
 .banner-item__text {
   display: flex;
   flex-direction: column;
+  margin-bottom: auto;
 
   h2 {
     margin-bottom: 1.5rem;
@@ -67,6 +78,8 @@
   }
 
   @include bp-tabletXS() {
+    width: calc(100% - 25rem);
+
     h2 {
       position: absolute;
       font-size: 4.2rem;
@@ -81,9 +94,7 @@
   }
 
   @include bp-mobile() {
-    width: 50%;
-    height: 16rem;
-    justify-content: space-between;
+    width: calc(50% - 0.5rem);
 
     h2 {
       font-size: 3.2rem;
@@ -120,18 +131,16 @@
   }
 
   @include bp-tabletXS() {
-    a {
-      min-width: auto;
-    }
-  }
-
-  @include bp-mobile() {
     width: 100%;
     flex-direction: column;
     margin-top: 2.5rem;
 
     a + a {
       margin: 1.2rem 0 0 0;
+    }
+
+    a {
+      min-width: auto;
     }
   }
 }
@@ -145,15 +154,7 @@
   }
 
   @include bp-tabletXS() {
-    width: 25rem;
-  }
-
-  @include bp-mobile() {
-    position: absolute;
-    justify-content: flex-start;
-    width: calc(50% - 1.2rem);
-    height: 16rem;
-    top: 10rem;
+    display: none;
   }
 }
 
@@ -185,7 +186,7 @@
   }
 
   @include bp-mobile() {
-    width: 100%;
+    width: calc(50% - 0.5rem);
     height: 16rem;
     padding: 1.8rem 2.5rem;
   }
