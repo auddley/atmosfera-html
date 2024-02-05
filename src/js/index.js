@@ -3,37 +3,37 @@ window.isDev = window.location.hostname === 'localhost' || window.location.hostn
 
 // LazyLoad
 ;(function () {
-  // Set the options to make LazyLoad self-initialize
-  window.lazyLoadOptions = {
-    elements_selector: '.lazy',
-    // ... more custom settings?
-  }
+    // Set the options to make LazyLoad self-initialize
+    window.lazyLoadOptions = {
+        elements_selector: '.lazy',
+        // ... more custom settings?
+    }
 
-  // Listen to the initialization event and get the instance of LazyLoad
-  window.addEventListener(
-    'LazyLoad::Initialized',
-    function (event) {
-      window.lazyLoadInstance = event.detail.instance
-      window.lazyLoadInstance.update()
-    },
-    false
-  )
+    // Listen to the initialization event and get the instance of LazyLoad
+    window.addEventListener(
+      'LazyLoad::Initialized',
+      function (event) {
+          window.lazyLoadInstance = event.detail.instance
+          window.lazyLoadInstance.update()
+      },
+      false
+    )
 })()
 
 // Scroll top
 ;(function () {
-  let scrollTop = legancy.scrollTop()
-  scrollTop.init()
+    let scrollTop = legancy.scrollTop()
+    scrollTop.init()
 })()
 
 // SVG
 ;(function () {
-  loadScript(
-    'https://cdnjs.cloudflare.com/ajax/libs/svg4everybody/2.1.9/svg4everybody.min.js',
-    function () {
-      svg4everybody()
-    }
-  )
+    loadScript(
+      'https://cdnjs.cloudflare.com/ajax/libs/svg4everybody/2.1.9/svg4everybody.min.js',
+      function () {
+          svg4everybody()
+      }
+    )
 })()
 
 //Popups
@@ -47,10 +47,12 @@ window.isDev = window.location.hostname === 'localhost' || window.location.hostn
     let localHistory = {
         application: null,
         search: null,
+        number: null,
     }
 
     const applicationPopupHtml = document.querySelector('.js-application')
     const searchPopupHtml = document.querySelector('.js-search')
+    const numberPopupHtml = document.querySelector('.js-number')
 
     //Запись в переменную шаблона конкретного попапа
 
@@ -64,6 +66,12 @@ window.isDev = window.location.hostname === 'localhost' || window.location.hostn
     if(searchPopupHtml) {
         localHistory.search = searchPopupHtml
         searchPopupHtml.remove();
+    }
+
+    // обратный звонок
+    if(numberPopupHtml) {
+        localHistory.number = numberPopupHtml
+        numberPopupHtml.remove();
     }
 
 
@@ -94,12 +102,25 @@ window.isDev = window.location.hostname === 'localhost' || window.location.hostn
         }
     });
 
+    const numberPopup = legancyPopup({
+        content: localHistory.number,
+        title: false,
+        close: true,
+        onAfterAppend(popup) {
+            window.masks.phone();
+        },
+        onAfterClose(popup) {
+
+        }
+    });
+
 
 
     //Объявление глобальной функцией
     window.popups = {
         application: applicationPopup,
         search: searchPopup,
+        number: numberPopup,
     }
 
     //События клика
@@ -115,6 +136,11 @@ window.isDev = window.location.hostname === 'localhost' || window.location.hostn
             case 'search':
                 el.addEventListener('click', () => {
                     window.popups.search.open()
+                });
+                break;
+            case 'number':
+                el.addEventListener('click', () => {
+                    window.popups.number.open()
                 });
                 break;
         }
