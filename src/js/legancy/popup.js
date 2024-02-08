@@ -138,7 +138,7 @@
         if (title) {
           const inputTitle = wrap.querySelector('.js-title-form');
           inputTitle.value = title;
-          inputTitle.setAttribute('disabled', 'disabled');
+          inputTitle.setAttribute('readonly', 'readonly');
         }
 
         !closing && wrap.classList.add('popup_open')
