@@ -34,8 +34,10 @@
     <div class="catalog-items__list">
         {% for el in listItems %}
             <div class="catalog-items__item">
-                <div class="catalog-items__img">
-                    <img src="{{ el.img }}" alt="">
+                <div class="catalog-items__img catalog-items__img_square">
+                    <a href="{{ el.href }}">
+                        <img src="{{ el.img }}" alt="">
+                    </a>
                 </div>
 
                 <h3 class="catalog-items__title">{{ el.title }}</h3>

@@ -35,7 +35,9 @@
         {% for el in catalogItems %}
             <div class="catalog-grid__item">
                 <div class="catalog-grid__img">
-                    <img src="{{ el.img }}" alt="">
+                    <a href="{{ el.href }}">
+                        <img src="{{ el.img }}" alt="">
+                    </a>
                 </div>
 
                 <h3 class="catalog-grid__label">{{ el.title }}</h3>

@@ -51,15 +51,29 @@
 
     .catalog-items__img {
       height: 16rem;
+
+      &_square {
+        height: 30rem;
+      }
     }
   }
 
   @include bp-mobile() {
     margin-bottom: 3rem;
 
+    .catalog-items__item {
+      width: 100%;
+
+      + .catalog-items__item {
+        margin-top: 3rem;
+        margin-left: 0;
+      }
+    }
+
     .catalog-items__img {
-      &_square {
-        height: 15rem;
+      img {
+        object-fit: contain;
+        background-color: #f0f6f6;
       }
     }
   }
