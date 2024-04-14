@@ -34,6 +34,7 @@
 .breadcrumbs__item {
   list-style-type: none;
   position: relative;
+  white-space: nowrap;
 
   + .breadcrumbs__item {
     padding-left: 1.5rem;

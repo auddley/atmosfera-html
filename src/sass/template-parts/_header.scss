@@ -64,6 +64,7 @@
     display: flex;
     align-items: center;
     padding: 0.7rem 0;
+    cursor: pointer;
 
     span {
       display: inline-block;
@@ -179,6 +180,8 @@
 
   @include bp-desktopXS() {
     margin: 1rem 0;
+    width: 100%;
+    align-items: center;
   }
 }
 
@@ -233,29 +236,63 @@
   }
 }
 
-.header-menu__contacts-sn {
-  @include bp-desktop(min) {
-    display: none;
-  }
-
-  @include bp-desktopXS() {
-    display: none;
-  }
-}
-
 .header-menu__contacts-group {
   display: flex;
   margin-right: 3rem;
 
   @include bp-desktop() {
     flex-direction: column;
+    margin-right: 2rem;
+  }
+}
+
+.header-menu__status {
+  background: #12ccd4;
+  display: flex;
+  color: white;
+  text-decoration: none;
+  padding: 0.7rem 1rem;
+  height: 4.5rem;
+  align-items: center;
+  border-radius: 0.6rem;
+  font-family: $font1;
+  font-size: 1.4rem;
+  margin-top: 1rem;
+  width: 17rem;
+  justify-content: space-between;
+  margin-left: auto;
+  transition: 0.3s;
+
+  &:hover {
+    background: map-get($basic, hover-main);
+  }
+
+  span {
+    margin-right: 2rem;
+  }
+
+  @include bp-desktopXS() {
+    margin-top: 0;
+    margin-right: 8rem;
+    padding: 0.5rem 1rem;
+    height: 3.8rem;
+  }
+
+  @include bp-tabletXS() {
+    margin-right: 2rem;
+  }
+
+  @include bp-mobile() {
+    display: none;
   }
 }
 
 .header-menu__contacts-address {
-  margin: 1rem 4rem 0 0;
+  margin: 1rem 2rem 0 3rem;
+  width: 21rem;
 
   @include bp-desktop() {
+    width: 30rem;
     order: 2;
     margin-right: 0;
     text-align: right;
@@ -836,7 +873,7 @@
 }
 
 .header-menu__search-sn {
-  @include bp-desktop() {
+  @include bp-desktopXS() {
     display: none;
   }
 }

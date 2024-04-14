@@ -105,15 +105,11 @@
   }
 
   @include bp-mobile() {
-    width: calc(50% - 0.5rem);
+    width: 100%;
 
     + .catalog-items__item {
       margin-left: 0;
-    }
-
-    &:nth-child(3) {
-      margin-top: 4rem;
-      margin-left: auto;
+      margin-top: 3rem;
     }
   }
 }
@@ -128,7 +124,8 @@
   img {
     height: 100%;
     width: 100%;
-    object-fit: cover;
+    object-fit: contain;
+    background-color: #f0f6f6;
   }
 
   &_height {
@@ -145,10 +142,18 @@
     &_height {
       height: 27rem;
     }
+
+    &_square {
+      height: 23rem;
+    }
   }
 
   @include bp-tablet() {
     &_height {
+      height: 22rem;
+    }
+
+    &_square {
       height: 22rem;
     }
   }
@@ -157,6 +162,10 @@
     &_height {
       height: 20rem;
     }
+
+    &_square {
+      height: 22rem;
+    }
   }
 
   @include bp-mobile() {
@@ -164,6 +173,10 @@
 
     &_height {
       height: 16rem;
+    }
+
+    &_square {
+      height: 30rem;
     }
   }
 }
@@ -224,12 +237,12 @@
 }
 
 .catalog-items__link {
-  background: map-get($gray, color_f0);
+  background: map-get($basic, hover-main);
+  color: $color-white;
   display: flex;
   align-items: center;
   justify-content: space-between;
   text-decoration: none;
-  color: map-get($basic, main);
   border-radius: 0.6rem;
   padding: 0.7rem 1rem;
   width: 17rem;
@@ -237,8 +250,7 @@
   margin-top: auto;
 
   &:hover {
-    background: map-get($basic, hover-main);
-    color: $color-white;
+    background: map-get($basic, hover-primary);
   }
 
   &_pink {

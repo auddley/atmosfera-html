@@ -31,7 +31,9 @@
         {% for el in listItems %}
             <div class="catalog-items__item">
                 <div class="catalog-items__img catalog-items__img_square">
-                    <img src="{{ el.img }}" alt="">
+                    <a href="">
+                        <img src="{{ el.img }}" alt="">
+                    </a>
                 </div>
 
                 <h3 class="catalog-items__title">{{ el.title }}</h3>
