@@ -1,33 +1,34 @@
 ;(function () {
     function accordionMenuInit() {
-        const accordionMenu = document.querySelectorAll('.js-menu-accordion');
+        const accordionMenu = document.querySelector('.js-mob-menu');
 
-        if (accordionMenu.length  && window.innerWidth <= 1199) {
+        if (accordionMenu && window.innerWidth <= 1199) {
+            const allBtns = accordionMenu.querySelectorAll('.js-mob-menu__btn');
+            const allList = accordionMenu.querySelectorAll('.js-mob-menu__list');
 
-            accordionMenu.forEach(el => {
-                const btn = el.querySelector('.js-accordion-btn');
-                const body = el.querySelector('.js-accordion-body');
+            allList.forEach(el => {
+                el.style.display = 'none';
+            })
 
-                body.classList.add('accordion-body');
-                body.style.display = 'none';
-                body.style.height = 'auto';
+            allBtns.forEach(el => {
+                el.addEventListener('click', () => {
+                    const elAfterBtn = el.nextElementSibling;
 
-                if (el.classList.contains('active')) {
-                    body.style.display = 'none';
-                }
-
-                btn.addEventListener('click', () => {
-                    if (!el.classList.contains('active')) {
-                        el.classList.add('active');
-                        body.style.display = 'flex';
-                        body.style.flexDirection = 'column';
-                    } else {
-                        el.classList.remove('active');
-                        body.style.display = 'none';
-
+                    if (el.classList.contains('js-mob-menu__btn') && elAfterBtn.classList.contains('js-mob-menu__list')) {
+                        if (el.classList.contains('active')) {
+                            el.classList.remove('active');
+                            elAfterBtn.classList.remove('active');
+                            elAfterBtn.style.display = 'none';
+                        } else {
+                            el.classList.add('active');
+                            elAfterBtn.classList.add('active');
+                            elAfterBtn.style.display = 'flex';
+                            elAfterBtn.style.flexDirection = 'column';
+                            elAfterBtn.style.height = 'auto';
+                        }
                     }
-                });
-            });
+                })
+            })
         }
     }
 

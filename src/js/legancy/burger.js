@@ -4,7 +4,7 @@
 
         if (btnBurger) {
             const wrapperHeader = document.querySelector('.header-menu__wrapper');
-            const menu = wrapperHeader.querySelector('.header-menu');
+            const menu = wrapperHeader.querySelector('.mob-menu');
 
             btnBurger.addEventListener('click', () => {
                 let toggle = btnBurger.classList.contains('active') ? 'remove' : 'add';
