@@ -969,6 +969,10 @@
 }
 
 .mob-menu {
+  @include bp-desktopXS(min) {
+    display: none;
+  }
+
   position: absolute;
   transform: translateX(-100%);
   transition: 0.3s;
