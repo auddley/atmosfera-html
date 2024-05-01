@@ -6,6 +6,10 @@
   margin-bottom: 3.5rem;
   border-bottom: 1px solid map-get($gray, color_d4);
 
+  @include bp-desktopXS() {
+    margin-top: 2rem;
+  }
+
   @include bp-tablet() {
     margin-bottom: 2rem;
   }
@@ -13,6 +17,7 @@
   @include bp-tabletXS() {
     padding: 0;
     border-bottom: none;
+    margin-top: 0;
   }
 }
 
