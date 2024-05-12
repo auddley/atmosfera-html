@@ -1088,7 +1088,7 @@
 }
 
 .mob-menu__btn {
-  padding: 1rem 3rem 1rem 1rem;
+  padding: 2rem 3rem 2rem 1rem;
 
   a {
     text-decoration: none;
@@ -1109,7 +1109,7 @@
       transform: rotate(-45deg);
       position: absolute;
       right: 1.5rem;
-      top: 1rem;
+      top: 2rem;
       transition: 0.3s;
     }
   }
@@ -1122,7 +1122,7 @@
 
       &::after {
         transform: rotate(-225deg);
-        top: 1.5rem;
+        top: 2.5rem;
         border-color: map-get($basic, hover-primary);
       }
     }

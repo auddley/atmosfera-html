@@ -18,6 +18,17 @@
           bodyMenu.classList.remove('active');
         }
       })
+
+      document.addEventListener( 'click', (e) => {
+        const withinBoundaries = e.composedPath().includes(bodyMenu);
+        const btn = e.composedPath().includes(btnMenu);
+
+        if (!withinBoundaries && !btn) {
+          btnMenu.classList.remove('active');
+          btnIcon.classList.remove('active');
+          bodyMenu.classList.remove('active');
+        }
+      })
     }
   }
 
