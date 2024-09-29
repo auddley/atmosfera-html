@@ -129,5 +129,17 @@
   @include bp-mobile() {
     flex-direction: column;
   }
+
+  .img-desk {
+    @include bp-mobile() {
+      display: none;
+    }
+  }
+
+  .img-mob {
+    @include bp-mobile(min) {
+      display: none;
+    }
+  }
 }
 
