@@ -8,7 +8,8 @@
 
     .js-slider-banner {
       overflow: hidden;
-      height: 43rem;
+      //height: 43rem;
+      aspect-ratio: 14 / 4.3;
       border-radius: 0.6rem;
     }
 
@@ -20,7 +21,8 @@
 
     .swiper-slide {
       min-width: 100%;
-      height: 43rem;
+      //height: 43rem;
+      aspect-ratio: 14 / 4.3;
       display: block;
       transition: 0.3s;
 
@@ -73,13 +75,13 @@
     }
 
     @include bp-desktop() {
-      .js-slider-banner {
-        height: 35rem;
-      }
-
-      .swiper-slide {
-        height: 35rem;
-      }
+      //.js-slider-banner {
+      //  height: 35rem;
+      //}
+      //
+      //.swiper-slide {
+      //  height: 35rem;
+      //}
     }
 
     @include bp-desktopXS() {
@@ -89,36 +91,50 @@
     }
 
     @include bp-tablet() {
-      .js-slider-banner {
-        height: 28rem;
-      }
-
-      .swiper-slide {
-        height: 28rem;
-      }
+      //.js-slider-banner {
+      //  height: 28rem;
+      //}
+      //
+      //.swiper-slide {
+      //  height: 28rem;
+      //}
     }
 
     @include bp-mobile() {
       width: 100%;
       margin-bottom: 1rem;
 
-      .js-slider-banner {
-        height: 23rem;
-      }
-
-      .swiper-slide {
-        height: 23rem;
-      }
+      //.js-slider-banner {
+      //  height: 23rem;
+      //}
+      //
+      //.swiper-slide {
+      //  height: 23rem;
+      //}
     }
 
-    @include bp-mobileXS() {
-      .js-slider-banner {
-        height: 20rem;
-      }
+    //@include bp-mobileXS() {
+    //  .js-slider-banner {
+    //    height: 20rem;
+    //  }
+    //
+    //  .swiper-slide {
+    //    height: 20rem;
+    //  }
+    //}
 
-      .swiper-slide {
-        height: 20rem;
-      }
+    /* stylelint-disable */
+
+    @media (max-width: 430px) {
+        .js-slider-banner {
+          height: 20rem;
+          aspect-ratio: auto;
+        }
+
+        .swiper-slide {
+          height: 20rem;
+          aspect-ratio: auto;
+        }
     }
   }
 
@@ -126,20 +142,27 @@
     margin: 0 0 3rem;
   }
 
+  @include bp-tabletXS() {
+    margin: 0 0 2rem;
+  }
+
   @include bp-mobile() {
     flex-direction: column;
   }
 
   .img-desk {
-    @include bp-mobile() {
+    @media (max-width: 430px) {
       display: none;
     }
   }
 
   .img-mob {
-    @include bp-mobile(min) {
-      display: none;
+    display: none;
+
+    @media (max-width: 430px) {
+      display: flex;
     }
   }
 }
 
+/* stylelint-enable */
