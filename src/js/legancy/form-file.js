@@ -35,7 +35,7 @@
 
                         // Показ загружаемых файлов
                         if (file) {
-                            textSelector.textContent = file.name;
+                            textSelector.innerHTML += '<span>' + file.name + '</span>';
                         }
                     }
                 });

@@ -161,7 +161,11 @@
   }
 }
 
-.upload-file__label .upload-file__text {
+.upload-file__wrapper .upload-file__text {
   transition: 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 10px;
 }
 
