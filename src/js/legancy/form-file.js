@@ -8,43 +8,35 @@
 
                 inputFile.forEach(function(el) {
                     let textSelector = wrap.querySelector('.upload-file__text');
-                    let fileList;
 
                     // Событие выбора файла(ов)
                     el.addEventListener('change', function (e) {
-                        // создаём массив файлов
-                        fileList = [];
-                        for (let i = 0; i < el.files.length; i++) {
-                            fileList.push(el.files[i]);
-                        }
+                        // Очищаем старый список
+                        textSelector.innerHTML = '';
 
-                        // вызов функции для каждого файла
+                        // Создаем массив файлов
+                        const fileList = Array.from(el.files);
+
+                        // Вызываем функцию для каждого файла
                         fileList.forEach(file => {
                             uploadFile(file);
                         });
                     });
 
-                    // Проверяем размер файлов, удаляем дубликаты и выводим название
+                    // Проверяем размер файлов и выводим название
                     const uploadFile = (file) => {
                         console.log('file', file);
 
-                        // файл < 5 Мб
+                        // файла < 5 Мб
                         if (file.size > 5 * 1024 * 1024) {
                             alert('Файл должен быть не более 5 МБ.');
                             return;
                         }
 
-                        // Проверка и удаление дубликатов
-                        const fileName = file.name;
-                        const existingFiles = Array.from(textSelector.children);
-                        const existingFile = existingFiles.find(child => child.textContent === fileName);
-
-                        if (existingFile) {
-                            textSelector.removeChild(existingFile); // Удаляем из текущего списка
+                        // Показ загружаемых файлов
+                        if (file) {
+                            textSelector.innerHTML += `<span>${file.name}</span>`;
                         }
-
-                        // Показ загружаемых файлов в конце списка
-                        textSelector.innerHTML += `<span>${fileName}</span>`;
                     }
                 });
             });
