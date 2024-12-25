@@ -9,6 +9,7 @@
                 inputFile.forEach(function(el) {
                     let textSelector = wrap.querySelector('.upload-file__text');
                     let fileList;
+
                     // Событие выбора файла(ов)
                     el.addEventListener('change', function (e) {
                         // создаём массив файлов
@@ -23,26 +24,31 @@
                         });
                     });
 
-                    // Проверяем размер файлов и выводим название
+                    // Проверяем размер файлов, удаляем дубликаты и выводим название
                     const uploadFile = (file) => {
+                        console.log('file', file);
 
-                        console.log('file', file)
-                        // файла <5 Мб
+                        // файл < 5 Мб
                         if (file.size > 5 * 1024 * 1024) {
                             alert('Файл должен быть не более 5 МБ.');
                             return;
                         }
 
-                        // Показ загружаемых файлов
-                        if (file) {
-                            textSelector.innerHTML += '<span>' + file.name + '</span>';
+                        // Проверка и удаление дубликатов
+                        const fileName = file.name;
+                        const existingFiles = Array.from(textSelector.children);
+                        const existingFile = existingFiles.find(child => child.textContent === fileName);
+
+                        if (existingFile) {
+                            textSelector.removeChild(existingFile); // Удаляем из текущего списка
                         }
+
+                        // Показ загружаемых файлов в конце списка
+                        textSelector.innerHTML += `<span>${fileName}</span>`;
                     }
                 });
-            })
+            });
         }
-
-
     }
 
     window.fileForm = {
