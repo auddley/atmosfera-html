@@ -7,6 +7,10 @@
     margin-bottom: 7rem;
   }
 
+  @include bp-tabletXS() {
+    flex-direction: column;
+  }
+
   @include bp-mobile() {
     margin-bottom: 3rem;
   }
@@ -25,11 +29,6 @@
   @include bp-tabletXS() {
     width: 100%;
     margin-right: 0;
-
-    .banner-item__img {
-      display: flex;
-      margin-top: 2.5rem;
-    }
 
     h2 {
       order: 1;
@@ -134,7 +133,7 @@
   }
 
   @include bp-tabletXS() {
-    display: none;
+    width: 100%;
   }
 }
 
@@ -156,6 +155,7 @@
   @include bp-desktopXS() {
     width: 32rem;
     margin-right: 0;
+    display: none;
   }
 
   @include bp-tabletXS() {
@@ -256,6 +256,26 @@
   }
 
   @include bp-desktopXS() {
-    display: none;
+    width: 35rem;
+  }
+
+  @include bp-tabletXS() {
+    width: 100%;
+    height: 100%;
+    order: 4;
+    margin-top: 2.5rem;
+
+    .swiper-slide {
+      height: 100%;
+    }
+
+    .js-slider-banner {
+      height: 100%;
+    }
+  }
+
+  @include bp-mobile() {
+    width: 100%;
+    height: 26rem;
   }
 }
