@@ -184,7 +184,6 @@
     }
 
     .header-menu__status {
-      height: 3.5rem;
       padding: 0.5rem 1rem;
 
       span {
@@ -207,6 +206,7 @@
     @include bp-desktop() {
       .header-menu__contacts-group {
         margin-right: 3.5rem;
+        margin-top: 0.7rem;
       }
 
       .desktop-menu {
@@ -216,6 +216,30 @@
 
     @include bp-desktopXS() {
       margin-bottom: 0;
+    }
+
+    @include bp-tablet() {
+      .header-menu__contacts-group {
+        margin-right: 1rem;
+      }
+    }
+
+    @include bp-tabletXS() {
+      .header-menu__status {
+        display: none;
+      }
+
+      .contacts-item__wrap {
+        display: none;
+      }
+
+      .container {
+        align-items: center;
+      }
+
+      .header-menu__icons-list {
+        margin-top: 0;
+      }
     }
   }
 
@@ -231,23 +255,32 @@
       position: relative;
       z-index: 100;
     }
+
+    @include bp-tabletXS() {
+      align-items: flex-start;
+    }
   }
 }
 
 .header-menu__info {
   display: flex;
   justify-content: space-between;
-  margin: 2.2rem 0;
+  margin: 1.2rem 0;
 
   @include bp-desktopXS() {
     margin: 1rem 0;
     width: 100%;
     align-items: center;
   }
+
+  @include bp-tabletXS() {
+    flex-wrap: wrap;
+  }
 }
 
 .header-menu__logo {
   display: flex;
+  margin-top: 1rem;
 
   .logo {
     width: 18rem;
@@ -260,22 +293,23 @@
       width: 11rem;
     }
   }
+
+  @include bp-tabletXS() {
+    width: 100%;
+    margin-top: 0;
+  }
 }
 
 .header-menu__logo-desc {
   margin: 1.5rem 0 0 2rem;
 
-  @include bp-tablet() {
+  @include bp-desktopXS() {
     display: none;
   }
 }
 
 .header-menu__contacts {
   display: flex;
-
-  @include bp-desktopXS() {
-    display: none;
-  }
 }
 
 .list-sn {
@@ -302,8 +336,18 @@
   margin-right: 3rem;
 
   @include bp-desktop() {
-    flex-direction: column;
     margin-right: 2rem;
+  }
+
+  @include bp-desktopXS() {
+    .contacts-item__title {
+      display: none;
+    }
+  }
+
+  @include bp-tablet() {
+    margin-right: 1rem;
+    margin-top: 0.7rem;
   }
 }
 
@@ -312,13 +356,13 @@
   display: flex;
   color: white;
   text-decoration: none;
-  padding: 0.7rem 1rem;
-  height: 4.5rem;
+  padding: 0.5rem 1rem;
+  height: 3.5rem;
   align-items: center;
   border-radius: 0.6rem;
   font-family: $font1;
   font-size: 1.4rem;
-  margin-top: 1rem;
+  margin-top: 2.1rem;
   width: 17rem;
   justify-content: space-between;
   margin-left: auto;
@@ -330,33 +374,78 @@
 
   span {
     margin-right: 2rem;
+    font-size: 1.2rem;
   }
 
   @include bp-desktopXS() {
     margin-top: 0;
-    margin-right: 8rem;
+    margin-right: 3rem;
     padding: 0.5rem 1rem;
     height: 3.8rem;
   }
 
-  @include bp-tabletXS() {
-    margin-right: 2rem;
+  @include bp-tablet() {
+    margin-right: 1rem;
+    height: 3.8rem;
   }
 
-  @include bp-mobile() {
-    display: none;
+  @include bp-tabletXS() {
+    margin-left: 0;
+    margin-top: 0.5rem;
+  }
+
+  @include bp-mobileXS() {
+    width: 16rem;
   }
 }
 
 .header-menu__contacts-address {
-  margin: 1rem 2rem 0 3rem;
+  margin: 2.5rem 2rem 0 3rem;
   width: 21rem;
 
-  @include bp-desktop() {
-    width: 30rem;
-    order: 2;
-    margin-right: 0;
+  @include bp-desktopXS() {
+    margin-top: 0.2rem;
     text-align: right;
+  }
+
+  @include bp-tablet() {
+    display: none;
+  }
+}
+
+.contacts-item__wrap {
+  display: flex;
+  gap: 1.6rem;
+
+  @include bp-desktopXS() {
+    gap: 1rem;
+
+    .contacts-item__link svg {
+      width: 3.8rem;
+      height: 3.8rem;
+    }
+  }
+
+  @include bp-tablet() {
+    .contacts-item__link svg {
+      width: 3.6rem;
+      height: 3.6rem;
+    }
+  }
+
+  @include bp-tabletXS() {
+    position: absolute;
+    right: 1rem;
+    top: 6.5rem;
+
+    .contacts-item__link svg {
+      width: 3.8rem;
+      height: 3.8rem;
+    }
+  }
+
+  @include bp-mobileXS() {
+    gap: 0.8rem;
   }
 }
 
@@ -366,7 +455,7 @@
   align-items: flex-end;
 
   .contacts-item__title {
-    margin: 0;
+    margin: 0 0 0.9rem 0;
   }
 
   .contacts-item__link {
@@ -376,6 +465,7 @@
     color: map-get($basic, main);
     transition: 0.3s;
     font-family: $font1;
+    display: inline-block;
 
     &:hover {
       color: map-get($basic, hover-primary);
@@ -393,6 +483,12 @@
       &:hover {
         color: map-get($basic, hover-primary);
       }
+    }
+  }
+
+  @include bp-desktopXS() {
+    &.tel {
+      display: none;
     }
   }
 }
@@ -910,6 +1006,7 @@
 
 .header-menu__icons-list {
   display: flex;
+  gap: 1rem;
 
   a,
   button {
@@ -924,12 +1021,12 @@
     align-items: center;
   }
 
-  button {
-    margin-left: 1rem;
-  }
-
   @include bp-desktopXS(min) {
     display: none;
+  }
+
+  @include bp-tabletXS() {
+    margin-top: 1.5rem;
   }
 }
 
