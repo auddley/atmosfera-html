@@ -803,12 +803,16 @@
 }
 
 .main-menu__list {
-  display: flex;
-  flex-wrap: wrap;
-  //flex-direction: column;
-  gap: 2.5rem;
-  //max-height: 150%;
+  //display: flex;
+  //flex-wrap: wrap;
+  //gap: 2.5rem;
   padding-bottom: 1rem;
+  display: block;
+  column-count: 3;
+
+  @include bp-desktopXS() {
+    column-count: 2;
+  }
 }
 
 .main-menu__section {
@@ -817,6 +821,10 @@
   gap: 1.5rem;
   width: 100%;
   max-width: 30rem;
+
+  + .main-menu__section {
+    margin-top: 2.5rem;
+  }
 }
 
 .main-menu__section-links {
