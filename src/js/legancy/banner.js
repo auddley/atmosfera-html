@@ -10,12 +10,14 @@
             const settingsSlider = {
                 direction: 'horizontal',
                 speed: 600,
-                spaceBetween: 10,
+                spaceBetween: 0,
                 autoplay: {
                     delay: 3000,
                 },
                 loop: true,
                 slidesPerView: 1,
+                observer: true,
+                observeParents: true,
                 breakpoints: {
                     320: {
                         pagination: false,

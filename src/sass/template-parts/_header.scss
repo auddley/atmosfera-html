@@ -239,6 +239,14 @@
 
       .header-menu__icons-list {
         margin-top: 0;
+
+        a:first-child {
+          display: none;
+        }
+
+        .btn-for-scroll {
+          display: flex;
+        }
       }
     }
   }
@@ -348,6 +356,10 @@
   @include bp-tablet() {
     margin-right: 1rem;
     margin-top: 0.7rem;
+  }
+
+  @include bp-tabletXS() {
+    margin: 0;
   }
 }
 
@@ -1032,6 +1044,10 @@
 
   @include bp-tabletXS() {
     margin-top: 1.5rem;
+  }
+
+  .btn-for-scroll {
+    display: none;
   }
 }
 
